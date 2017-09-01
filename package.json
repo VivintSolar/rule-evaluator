@@ -1,0 +1,23 @@
+{
+  "name": "rule-evaluator",
+  "version": "0.0.1",
+  "description": "Node Package to evaluate rules from the Requirements Manager",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kennethchatfield/rule-evaluator.git"
+  },
+  "author": "Kenneth Chatfield <chatfield.kenny@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kennethchatfield/rule-evaluator/issues"
+  },
+  "homepage": "https://github.com/kennethchatfield/rule-evaluator#readme",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^3.5.0"
+  }
+}
