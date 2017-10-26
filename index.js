@@ -94,13 +94,13 @@ module.exports = class Evaluation {
     get errors(){
         return (this._errors)?this._errors.list:this._errors;
     }
-    get exceptions(){
+    exceptions(){
         this._evaluationType = 'exceptions';
         this.validateRules();
         this.parseRules();
         return this._serviceAhj;
     }
-    get evaluate(){
+    evaluate(){
         this._evaluationType = 'evaluate';
         this.validateConditions();
         this.validateRules();
@@ -243,11 +243,31 @@ module.exports = class Evaluation {
         }
         return statements;
     }
+    createMap(items){
+        return Object.assign({},
+            ...items.map(item=>{
+                return {[item.id]:item}
+            })
+        )
+    }
+    swapReferenceIds(statement,id){
+        const { template } = this._definitions.rules[id];
+        if(template.items)Object.assign(template, {itemsMap:this.createMap(template.items)});
+        if(template.dataType==='ordered list'){
+            statement.value = statement.value.map(id=>{
+                return template.itemsMap[id]
+            })
+        }
+        if(template.dataType==='enum'){
+            statement.value = template.itemsMap[statement.value].name;
+        }
+    }
     parseStatements(id, statements){
         let descriptions;
         const { dataType } = this._definitions.rules[id].template;
         const conflictFreeStatements = this.resolveConflicts(id,statements);
         const evaluated = conflictFreeStatements.filter(statement=>{
+            this.swapReferenceIds(statement,id);
             if(this._evaluationType==='exceptions'&&statement.description){
                 if(!descriptions) descriptions = [];
                 descriptions.push(statement.description);
