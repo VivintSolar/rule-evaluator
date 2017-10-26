@@ -1,10 +1,10 @@
 {
   "name": "rule-evaluator",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Node Package to evaluate rules from the Requirements Manager",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --reporter spec"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -15,12 +15,5 @@
   "bugs": {
     "url": "https://github.com/kennethchatfield/rule-evaluator/issues"
   },
-  "homepage": "https://github.com/kennethchatfield/rule-evaluator#readme",
-  "devDependencies": {
-    "chai": "^4.1.2",
-    "mocha": "^3.5.0"
-  },
-  "dependencies": {
-    "lodash.pick": "^4.4.0"
-  }
+  "homepage": "https://github.com/kennethchatfield/rule-evaluator#readme"
 }
