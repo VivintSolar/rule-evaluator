@@ -1,38 +1,16 @@
+
 module.exports = class Evaluation {
     constructor({
         serviceAhj,
-        documents,
         definitions,
         conditions,
         rules
     }) {
-        this.mergeRules = () => {
-            let appliedRules = {};
-            this._documents.map(ahj=>{
-                const rules = this._rules||Object.keys(ahj.rules);
-                const {id, name, type} = ahj;
-                rules.map(key=>{
-                    const rule = ahj.rules[key];
-                    if(rule){
-                        if(!appliedRules[key]){
-                            appliedRules[key] = Object.assign({},{id:key, statements:[]})
-                        }
-                        rule.statements.map(statement=>{
-                            appliedRules[key].statements.push(
-                                Object.assign({}, statement, {source:{id,name,type}})
-                            )
-                        })
-                    }
-                })
-            });
-            return appliedRules;
-        };
         this._serviceAhj = serviceAhj;
-        this._documents = documents;
         this._definitions = definitions;
         this._conditions = conditions;
         this._rules = rules;
-        this._appliedRules = this.mergeRules();
+        this._appliedRules = JSON.parse(JSON.stringify(serviceAhj.rules));
         this._errors = null;
         this._timeStamp = new Date();
         this._evaluationType = undefined;
@@ -114,7 +92,8 @@ module.exports = class Evaluation {
     }
     _appliedConditions(id){
         let appliedConditions;
-        this._appliedRules[id].statements.map(statement=>{
+        const rule = this._appliedRules[id];
+        rule.statements.map(statement=>{
             if(statement.condition){
                 if(!appliedConditions) appliedConditions = [];
                 statement.condition.map(condition=>{
@@ -208,7 +187,7 @@ module.exports = class Evaluation {
         });
         return descriptions
     }
-    mergeStatements(id,statements){
+    mergeStatements(id,statements, defaultSource){
         let obj, val, conditions, description, source;
         const { dataType } = this._definitions.rules[id].template;
         if(dataType==='object') obj = {};
@@ -224,24 +203,8 @@ module.exports = class Evaluation {
             description?{description}:{},
             conditions?{conditions}:{},
             {value: obj||val},
-            { source }
+            { source: source||defaultSource }
         );
-    }
-    resolveConflicts(id, statements){
-        const standard = () => {
-            let theType, types = ['City','County','Utility','Office','State',"Nation"];
-            return statements.sort(function(a,b){
-                return types.indexOf(a.source.type) < types.indexOf(b.source.type) ? -1 : 1;
-            }).filter((statement,index) => {
-                if(index===0) theType = statement.source.type;
-                return statement.source.type === theType;
-            });
-        };
-        const ruleDefinition = this._definitions.rules[id];
-        if(ruleDefinition.template.onConflict === 'standard'){
-            return standard();
-        }
-        return statements;
     }
     createMap(items){
         return Object.assign({},
@@ -262,22 +225,28 @@ module.exports = class Evaluation {
             statement.value = template.itemsMap[statement.value].name;
         }
     }
-    parseStatements(id, statements){
-        let descriptions;
+    parseStatements(id, appliedRule){
+        let descriptions, defaultSource;
+        const { statements, timeStamp } = appliedRule;
         const { dataType } = this._definitions.rules[id].template;
-        const conflictFreeStatements = this.resolveConflicts(id,statements);
-        const evaluated = conflictFreeStatements.filter(statement=>{
+
+        const evaluated = statements.filter(statement=>{
             this.swapReferenceIds(statement,id);
-            if(this._evaluationType==='exceptions'&&statement.description){
+            if( this._evaluationType==='exceptions' && statement.description ){
                 if(!descriptions) descriptions = [];
                 descriptions.push(statement.description);
             }
+            defaultSource = statement.source;
             return this.evaluateConditions(statement.condition)
         });
-        if(dataType==='object'&&this._evaluationType==='exceptions'){
-            descriptions = this.objectDescriptions(conflictFreeStatements)
+        if( dataType==='object' && this._evaluationType === 'exceptions' ){
+            descriptions = this.objectDescriptions(statements)
         }
-        return Object.assign(descriptions?{ descriptions }:{}, this.mergeStatements(id,evaluated))
+        return Object.assign(
+            descriptions ? { descriptions } : {},
+            timeStamp ? { timeStamp } : {},
+            this.mergeStatements(id, evaluated, defaultSource)
+        )
 
     }
     parseRules(){
@@ -285,7 +254,7 @@ module.exports = class Evaluation {
         rules.map(id=>{
             if(id){
                 const appliedRule = this._appliedRules[id];
-                this._serviceAhj.rules[id] = this.parseStatements(id,appliedRule.statements)
+                this._serviceAhj.rules[id] = this.parseStatements(id,appliedRule);
             }
         });
     }
