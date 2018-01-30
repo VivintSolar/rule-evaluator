@@ -1,6 +1,6 @@
 {
   "name": "rule-evaluator",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Node Package to evaluate rules from the Requirements Manager",
   "main": "index.js",
   "scripts": {

@@ -1,4 +1,12 @@
 
+const createMap = (items) => {
+    return Object.assign({},
+        ...items.map(item=>{
+            return {[item.id]:item}
+        })
+    )
+};
+
 module.exports = class Evaluation {
     constructor({
         serviceAhj,
@@ -191,7 +199,7 @@ module.exports = class Evaluation {
         let obj, val, conditions, description, source;
         const { dataType } = this._definitions.rules[id].template;
         if(dataType==='object') obj = {};
-        statements.map(statement=>{
+        statements.reverse().map(statement=>{
             const { value, condition } = statement;
             if(condition)conditions = [...conditions||[], ...condition];
             if(obj) Object.assign(obj, value);
@@ -206,16 +214,9 @@ module.exports = class Evaluation {
             { source: source||defaultSource }
         );
     }
-    createMap(items){
-        return Object.assign({},
-            ...items.map(item=>{
-                return {[item.id]:item}
-            })
-        )
-    }
     swapReferenceIds(statement,id){
         const { template } = this._definitions.rules[id];
-        if(template.items)Object.assign(template, {itemsMap:this.createMap(template.items)});
+        if(template.items)Object.assign(template, {itemsMap:createMap(template.items)});
         if(template.dataType==='ordered list'){
             statement.value = statement.value.map(id=>{
                 return template.itemsMap[id]
