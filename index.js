@@ -1,11 +1,4 @@
-
-const createMap = (items) => {
-    return Object.assign({},
-        ...items.map(item=>{
-            return {[item.id]:item}
-        })
-    )
-};
+const mergeStatements = require('./mergeStatements');
 
 module.exports = class Evaluation {
     constructor({
@@ -195,44 +188,14 @@ module.exports = class Evaluation {
         });
         return descriptions
     }
-    mergeStatements(id,statements, defaultSource){
-        let obj, val, conditions, description, source;
-        const { dataType } = this._definitions.rules[id].template;
-        if(dataType==='object') obj = {};
-        statements.reverse().map(statement=>{
-            const { value, condition } = statement;
-            if(condition)conditions = [...conditions||[], ...condition];
-            if(obj) Object.assign(obj, value);
-            description = statement.description;
-            val = value;
-            source = statement.source;
-        });
-        return Object.assign(
-            description?{description}:{},
-            conditions?{conditions}:{},
-            {value: obj||val},
-            { source: source||defaultSource }
-        );
-    }
-    swapReferenceIds(statement,id){
-        const { template } = this._definitions.rules[id];
-        if(template.items)Object.assign(template, {itemsMap:createMap(template.items)});
-        if(template.dataType==='ordered list'){
-            statement.value = statement.value.map(id=>{
-                return template.itemsMap[id]
-            })
-        }
-        if(template.dataType==='enum'){
-            statement.value = template.itemsMap[statement.value].name;
-        }
-    }
     parseStatements(id, appliedRule){
         let descriptions, defaultSource;
         const { statements, timeStamp } = appliedRule;
-        const { dataType } = this._definitions.rules[id].template;
+
+        const definition = this._definitions.rules[id];
+        const { dataType } = definition.template;
 
         const evaluated = statements.filter(statement=>{
-            this.swapReferenceIds(statement,id);
             if( this._evaluationType==='exceptions' && statement.description ){
                 if(!descriptions) descriptions = [];
                 descriptions.push(statement.description);
@@ -246,7 +209,7 @@ module.exports = class Evaluation {
         return Object.assign(
             descriptions ? { descriptions } : {},
             timeStamp ? { timeStamp } : {},
-            this.mergeStatements(id, evaluated, defaultSource)
+            mergeStatements({statements:evaluated, definition})
         )
 
     }
