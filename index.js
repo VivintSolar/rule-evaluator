@@ -1,4 +1,57 @@
-const mergeStatements = require('./mergeStatements');
+const { mergeStatements } = require('./onConflict/onConflict');
+
+
+const compress = (applied, definition) => {
+    return Object.assign({},
+        ...Object.keys(applied).map(key=>{
+            return { [key]:  mergeStatements({ statements: applied[key], definition })}
+        })
+    )
+};
+
+const showAppliedData = (serviceAhj, definitions, rules) => {
+
+    const reformatRule = (rule, definition) => {
+
+        const { statements } = rule;
+
+        const getKey = (statement) => {
+            if( !statement.condition ) return 'default';
+            return statement.condition.map(condition=>(condition.left)).join(' ')
+        };
+
+        let applied = {};
+
+        statements.map(statement=>{
+            const key = getKey(statement);
+            if(!applied[key]) applied[key] = [statement];
+            else applied[key].push(statement);
+        });
+
+        return Object.assign({},
+            rule,
+            { applied: compress(applied, definition) }
+        )
+    };
+
+    return Object.assign( {},
+        serviceAhj,
+        {
+            rules: Object.assign({},
+                ...Object.keys(serviceAhj.rules).map( id => {
+                    if( rules && rules.includes(id) ){
+                        return { [id]: reformatRule( serviceAhj.rules[id], definitions.rules[id] ) }
+                    } else {
+                        return { [id]: serviceAhj.rules[id] }
+                    }
+                })
+            )
+        }
+    )
+
+};
+
+
 
 module.exports = class Evaluation {
     constructor({
@@ -189,7 +242,7 @@ module.exports = class Evaluation {
         return descriptions
     }
     parseStatements(id, appliedRule){
-        let descriptions, defaultSource;
+        let descriptions;
         const { statements, timeStamp } = appliedRule;
 
         const definition = this._definitions.rules[id];
@@ -200,7 +253,6 @@ module.exports = class Evaluation {
                 if(!descriptions) descriptions = [];
                 descriptions.push(statement.description);
             }
-            defaultSource = statement.source;
             return this.evaluateConditions(statement.condition)
         });
         if( dataType==='object' && this._evaluationType === 'exceptions' ){
@@ -209,7 +261,7 @@ module.exports = class Evaluation {
         return Object.assign(
             descriptions ? { descriptions } : {},
             timeStamp ? { timeStamp } : {},
-            mergeStatements({statements:evaluated, definition})
+            mergeStatements({statements:evaluated, definition, swapReferences:true})
         )
 
     }
@@ -221,5 +273,9 @@ module.exports = class Evaluation {
                 this._serviceAhj.rules[id] = this.parseStatements(id,appliedRule);
             }
         });
+    }
+    showApplied(){
+        this._serviceAhj = showAppliedData( this._serviceAhj, this._definitions, this._rules );
+        return this._serviceAhj;
     }
 };
