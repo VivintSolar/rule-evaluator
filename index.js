@@ -1,4 +1,4 @@
-const { mergeStatements } = require('./onConflict/onConflict');
+const mergeStatements = require('./mergeStatements');
 
 
 const compress = (applied, definition) => {
