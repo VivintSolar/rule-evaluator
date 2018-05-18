@@ -1,4 +1,3 @@
-const mergeStatements = require('./mergeStatements');
 const { flatten } = require('./utilities/util');
 const _appliedConditions = require('./lib/_appliedConditions');
 const addError = require('./lib/addError');
