@@ -1,7 +1,7 @@
-const RuleEvaluator = require('../../index');
+const RuleEvaluator = require('../../../index');
 const expected = require('./expected-results');
 const assert = require('assert');
-const assocObj = require('../associationObject');
+const assocObj = require('../../associationObject');
 
 
 module.exports = () => {
@@ -17,5 +17,5 @@ module.exports = () => {
 
 
     assert.equal( expected, JSON.stringify(statements) );
-    console.log(' getAppliedStatement ---> Success!!!!!!!!!');
+    console.log('RE --- getAppliedStatement ---> Success!!!!!!!!!');
 };
