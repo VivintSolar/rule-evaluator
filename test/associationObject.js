@@ -191,6 +191,14 @@ module.exports = {
     "definitions": {
         "rules": {
             "testRequirementObject": {
+                "client":{
+                    "cobblestone":{
+                        "supportedConditions":{
+                            "testConditionEnum": ['option1'],
+                            "testConditionNumber":[ 4, 10, 15 ]
+                        }
+                    }
+                },
                 "template": {
                     "item": {
                         "attrName1": {
