@@ -11,18 +11,20 @@ class RuleEvaluator {
             .map( id => {
                 const appliedRule = serviceAhj.rules[ id ];
                 const ruleDefinition = definitions.rules[ id ];
-                const appliedConditionIds = getAppliedConditions( appliedRule.statements );
-                const appliedConditions = !appliedConditionIds ? null : pick(
-                    definitions.conditions,
-                    appliedConditionIds
-                );
+                if( appliedRule ){
+                    const appliedConditionIds = getAppliedConditions( appliedRule.statements );
+                    const appliedConditions = !appliedConditionIds ? null : pick(
+                        definitions.conditions,
+                        appliedConditionIds
+                    );
 
-                this.rules[ id ] = new Rule(Object.assign({},
-                    appliedRule,
-                    ruleDefinition,
-                    { appliedConditions }
-                ));
-                this.evaluate( id );
+                    this.rules[ id ] = new Rule(Object.assign({},
+                        appliedRule,
+                        ruleDefinition,
+                        { appliedConditions }
+                    ));
+                    this.evaluate( id );
+                }
             });
     }
     getRule( ruleId ){
