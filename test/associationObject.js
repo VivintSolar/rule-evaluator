@@ -183,8 +183,23 @@ module.exports = {
                     }
                 ],
                 "timeStamp": "2018-04-27T21:55:50.604Z",
-                "name": "Fire Code Setbacks",
-                "id": "fireCodeSetbacks"
+                "name": "Test Requirement Object",
+                "id": "testRequirementObject"
+            },
+            "alternativeMaxACSystemSizeCalculation":{
+                "statements":[
+                    {
+                        "value": "(squareFootage / 2) + (squareFootage * 2)",
+                        "source": {
+                            "id": "id",
+                            "type": "type",
+                            "name": "name"
+                        }
+                    }
+                ],
+                "timeStamp": "2018-04-27T21:55:50.604Z",
+                "id": "alternativeMaxACSystemSizeCalculation",
+                "name": "Alternative Max AC System Size Calculation",
             }
         }
     },
@@ -233,9 +248,35 @@ module.exports = {
                     "testConditionUnsupportedEnum"
                 ],
                 "rule": true
+            },
+            "alternativeMaxACSystemSizeCalculation":{
+                "template": {
+                    "onConflict": "standard",
+                    "dataType": "formula"
+                },
+                "description": "Alternative Max AC System Size Calculation",
+                "id": "alternativeMaxACSystemSizeCalculation",
+                "name": "Alternative Max AC System Size Calculation",
+                "allowableConditions": [
+                    "squareFootage"
+                ],
+                "rule": true
             }
         },
         "conditions": {
+            "squareFootage": {
+                "applyTo": [
+                    "alternativeMaxACSystemSizeCalculation"
+                ],
+                "template": {
+                    "units": "sq ft",
+                    "dataType": "number"
+                },
+                "condition": true,
+                "description": "Square Footage",
+                "id": "squareFootage",
+                "name": "Square Footage"
+            },
             "testConditionEnum": {
                 "applyTo": [
                     "testRequirementObject"
@@ -298,4 +339,4 @@ module.exports = {
             }
         }
     }
-}
+};
