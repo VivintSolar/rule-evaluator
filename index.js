@@ -12,7 +12,11 @@ class RuleEvaluator {
                 const appliedRule = serviceAhj.rules[ id ];
                 const ruleDefinition = definitions.rules[ id ];
                 if( appliedRule ){
-                    const appliedConditionIds = getAppliedConditions( appliedRule.statements );
+                    const appliedConditionIds = getAppliedConditions(
+                        appliedRule.statements,
+                        ruleDefinition.template.dataType,
+                        ruleDefinition.allowableConditions
+                    );
                     const appliedConditions = !appliedConditionIds ? null : pick(
                         definitions.conditions,
                         appliedConditionIds
