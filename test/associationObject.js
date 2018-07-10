@@ -189,6 +189,22 @@ module.exports = {
             "alternativeMaxACSystemSizeCalculation":{
                 "statements":[
                     {
+                        "value": "(systemSizeAc * 2) + (squareFootage / 8)",
+                        "description": "Service Elevation is greater Than 555ft",
+                        "condition": [
+                            {
+                                "left": "serviceElevation",
+                                "operator": ">",
+                                "right": 555
+                            }
+                        ],
+                        "source": {
+                            "id": "id",
+                            "type": "type",
+                            "name": "name"
+                        }
+                    },
+                    {
                         "value": "(squareFootage / 2) + (squareFootage * 2)",
                         "source": {
                             "id": "id",
@@ -258,7 +274,9 @@ module.exports = {
                 "id": "alternativeMaxACSystemSizeCalculation",
                 "name": "Alternative Max AC System Size Calculation",
                 "allowableConditions": [
-                    "squareFootage"
+                    "squareFootage",
+                    "serviceElevation",
+                    "systemSizeAc"
                 ],
                 "rule": true
             }
@@ -276,6 +294,32 @@ module.exports = {
                 "description": "Square Footage",
                 "id": "squareFootage",
                 "name": "Square Footage"
+            },
+            "serviceElevation": {
+                "applyTo": [
+                    "alternativeMaxACSystemSizeCalculation"
+                ],
+                "template": {
+                    "units": "ft",
+                    "dataType": "number"
+                },
+                "condition": true,
+                "description": "Service Elevation",
+                "id": "serviceElevation",
+                "name": "Service Elevation"
+            },
+            "systemSizeAc": {
+                "applyTo": [
+                    "alternativeMaxACSystemSizeCalculation"
+                ],
+                "template": {
+                    "units": "ft",
+                    "dataType": "number"
+                },
+                "condition": true,
+                "description": "AC System Size",
+                "id": "systemSizeAc",
+                "name": "AC System Size"
             },
             "testConditionEnum": {
                 "applyTo": [

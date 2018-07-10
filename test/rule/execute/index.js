@@ -11,12 +11,29 @@ module.exports = () => {
 
     const ruleEvaluator = evaluator.getRule( ruleId );
 
-    const conditions = {
+    let conditions = {
         squareFootage: 2000
     };
 
-    const evaluated = ruleEvaluator.evaluate( conditions );
+    let evaluated = ruleEvaluator.evaluate( conditions );
 
-    assert.equal( expected, JSON.stringify(evaluated) );
-    console.log('RULE --- execute ---> Success!!!!!!!!!');
+
+    assert.equal( expected.singleParam, JSON.stringify(evaluated) );
+    console.log('RULE --- execute.singleParam ---> Success!!!!!!!!!');
+
+    conditions = {
+        squareFootage: 1800,
+        systemSizeAc: 100,
+        serviceElevation: 2223
+    };
+
+    evaluated = ruleEvaluator.evaluate( conditions );
+
+    assert.equal( expected.withConditions, JSON.stringify(evaluated) );
+    console.log('RULE --- execute.withConditions ---> Success!!!!!!!!!');
+
+    evaluated = ruleEvaluator.evaluate( null );
+
+    assert.equal( expected.withErrors, JSON.stringify(evaluated) );
+    console.log('RULE --- execute.withErrors ---> Success!!!!!!!!!');
 };
