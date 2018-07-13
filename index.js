@@ -1,5 +1,6 @@
 const Rule = require('./lib/rule/index');
 const { getAppliedConditions, pick } = require('./lib/utilities/util');
+const execute = require('./lib/execute');
 
 class RuleEvaluator {
     constructor({
@@ -7,25 +8,31 @@ class RuleEvaluator {
         definitions
     }) {
         this.rules = {};
-        Object.keys( definitions.rules )
-            .map( id => {
-                const appliedRule = serviceAhj.rules[ id ];
-                const ruleDefinition = definitions.rules[ id ];
-                if( appliedRule ){
-                    const appliedConditionIds = getAppliedConditions( appliedRule.statements );
-                    const appliedConditions = !appliedConditionIds ? null : pick(
-                        definitions.conditions,
-                        appliedConditionIds
-                    );
+        if( serviceAhj && definitions ){
+            Object.keys( definitions.rules )
+                .map( id => {
+                    const appliedRule = serviceAhj.rules[ id ];
+                    const ruleDefinition = definitions.rules[ id ];
+                    if( appliedRule ){
+                        const appliedConditionIds = getAppliedConditions(
+                            appliedRule.statements,
+                            ruleDefinition.template.dataType,
+                            ruleDefinition.allowableConditions
+                        );
+                        const appliedConditions = !appliedConditionIds ? null : pick(
+                            definitions.conditions,
+                            appliedConditionIds
+                        );
 
-                    this.rules[ id ] = new Rule(Object.assign({},
-                        appliedRule,
-                        ruleDefinition,
-                        { appliedConditions }
-                    ));
-                    this.evaluate( id );
-                }
-            });
+                        this.rules[ id ] = new Rule(Object.assign({},
+                            appliedRule,
+                            ruleDefinition,
+                            { appliedConditions }
+                        ));
+                        this.evaluate( id );
+                    }
+                });
+        }
     }
     getRule( ruleId ){
       if( !this.rules[ ruleId ] ) return null;
@@ -53,6 +60,8 @@ class RuleEvaluator {
         ))
     }
 }
+
+RuleEvaluator.prototype.execute = execute;
 
 
 module.exports = RuleEvaluator;
