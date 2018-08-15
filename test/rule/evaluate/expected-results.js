@@ -16,21 +16,6 @@ module.exports = JSON.stringify({
             "right": "option1"
         },
         {
-            "left": "testConditionEnum",
-            "operator": "=",
-            "right": "option1"
-        },
-        {
-            "left": "testConditionNumber",
-            "operator": "<",
-            "right": 9.5
-        },
-        {
-            "left": "testConditionNumber",
-            "operator": "<",
-            "right": 9.5
-        },
-        {
             "left": "testConditionNumber",
             "operator": "<",
             "right": 9.5
@@ -62,5 +47,6 @@ module.exports = JSON.stringify({
         "attrName2": 0,
         "attrName3": 200,
         "attrName1": 0
-    }
+    },
+    "errors": null
 });

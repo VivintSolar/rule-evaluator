@@ -7,6 +7,7 @@ const getAppliedStatement = require('./rule/getAppliedStatement/index');
 const getPossibleStatements = require('./rule/getPossibleStatements/index');
 const getUnsupportedStatements = require('./rule/getUnsupportedStatements/index');
 const evaluate = require('./rule/evaluate/index');
+const execute = require('./rule/execute/index');
 
 
 
@@ -19,3 +20,4 @@ getAppliedStatement();
 getPossibleStatements();
 getUnsupportedStatements();
 evaluate();
+execute();
