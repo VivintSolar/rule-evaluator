@@ -1,5 +1,5 @@
 const Evaluator = require('../../../index');
-const expected = require('./expected-results');
+const expected = JSON.parse(require('./expected-results'));
 const assert = require('assert');
 const assocObj = require('../../associationObject');
 
@@ -16,7 +16,6 @@ module.exports = () => {
 
     const evaluated = evaluator.evaluate( ruleId, conditions );
 
-
-    assert.equal( expected, JSON.stringify(evaluated) );
+    assert.equal( JSON.stringify(expected.value), JSON.stringify(evaluated.value) );
     console.log('RE --- evaluateRule ---> Success!!!!!!!!!');
 };
