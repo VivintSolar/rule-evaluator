@@ -5,7 +5,8 @@ const execute = require('./lib/execute');
 class RuleEvaluator {
     constructor({
         serviceAhj,
-        definitions
+        definitions,
+        conditions
     }) {
         this.rules = {};
         if( serviceAhj && definitions ){
@@ -29,7 +30,7 @@ class RuleEvaluator {
                             ruleDefinition,
                             { appliedConditions }
                         ));
-                        this.evaluate( id );
+                        this.evaluate( id, conditions );
                     }
                 });
         }
