@@ -43,6 +43,13 @@ class RuleEvaluator {
         if( !this.rules[ ruleId ] ) return null;
         return this.rules[ ruleId ].evaluate( conditions )
     }
+    evaluateAll() {
+        return Object.assign({},
+            ...Object.keys(this.rules).map(ruleId => ({
+                [ ruleId ]: this.rules[ruleId].evaluate()
+            }))
+        )
+    }
     getUnsupportedStatements( ruleId, clientConditions ){
         if( !this.rules[ ruleId ] ) return null;
         return this.rules[ ruleId ].getUnsupportedStatements( clientConditions )
