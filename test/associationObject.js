@@ -216,6 +216,22 @@ module.exports = {
                 "timeStamp": "2018-04-27T21:55:50.604Z",
                 "id": "alternativeMaxACSystemSizeCalculation",
                 "name": "Alternative Max AC System Size Calculation",
+            },
+            "nullResultsTest":{
+                "id": "nullResultsTest",
+                "statements":[
+                    {
+                        "value": {
+                            "enumTest": "enumOption1",
+                            "numberTest": 1234123,
+                            "boolTest": true,
+                            "orderedListTest": ['orderedListOption1', 'orderedListOption2']
+                        },
+                        "condition": [
+                            { "left": "serviceElevation", "operator": "=", "right": 2 }
+                        ]
+                    }
+                ]
             }
         }
     },
@@ -279,6 +295,44 @@ module.exports = {
                     "systemSizeAc"
                 ],
                 "rule": true
+            },
+            "nullResultsTest":{
+                "id": "nullResultsTest",
+                "name": "Null Results Test",
+                "description": "Null Results Test",
+                "rule": true,
+                "allowableConditions": [
+                    "serviceElevation"
+                ],
+                "template":{
+                    "dataType": "object",
+                    "item":{
+                        "enumTest":{
+                            "name": "Enum Test",
+                            "dataType": "enum",
+                            "items":[
+                                {"id": "enumOption1", "name": "Enum Option 1"},
+                                {"id": "enumOption2", "name": "Enum Option 2"}
+                            ]
+                        },
+                        "numberTest":{
+                            "name": "Number Test",
+                            "dataType": "number"
+                        },
+                        "boolTest":{
+                            "name": "Boolean Test",
+                            "dataType": "boolean"
+                        },
+                        "orderedListTest":{
+                            "name": "Ordered List Test",
+                            "dataType": "ordered list",
+                            "items": [
+                                {"id": "orderedListOption1", "name": "Ordered List Option 1"},
+                                {"id": "orderedListOption2", "name": "Ordered List Option 2"}
+                            ]
+                        }
+                    }
+                }
             }
         },
         "conditions": {
@@ -297,7 +351,8 @@ module.exports = {
             },
             "serviceElevation": {
                 "applyTo": [
-                    "alternativeMaxACSystemSizeCalculation"
+                    "alternativeMaxACSystemSizeCalculation",
+                    "nullResultsTest"
                 ],
                 "template": {
                     "units": "ft",
