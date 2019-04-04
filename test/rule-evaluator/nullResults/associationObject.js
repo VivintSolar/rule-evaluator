@@ -71,6 +71,11 @@ module.exports = {
                         ]
                     }
                 ]
+            },
+            "testFormula": {
+                "statements": [
+                    { "value": "(serviceElevation - squareFootage) / 2" }
+                ]
             }
         }
     },
@@ -175,6 +180,18 @@ module.exports = {
                 ],
                 "template":{
                     "dataType": "number"
+                }
+            },
+            "testFormula": {
+                "id": "testFormula",
+                "name": "Test Formula",
+                "description": "Test Formula",
+                "allowableConditions": [
+                    "serviceElevation",
+                    "squareFootage"
+                ],
+                "template":{
+                    "dataType": "formula"
                 }
             }
         },

@@ -17,7 +17,6 @@ module.exports = () => {
 
     let evaluated = ruleEvaluator.evaluate( conditions );
 
-
     assert.equal( expected.singleParam, JSON.stringify(evaluated) );
     console.log('RULE --- execute.singleParam ---> Success!!!!!!!!!');
 

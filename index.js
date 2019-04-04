@@ -40,7 +40,14 @@ class RuleEvaluator {
       return this.rules[ ruleId ];
     }
     evaluate(ruleId, conditions){
-        if( !this.rules[ ruleId ] ) return null;
+        if( !this.rules[ ruleId ] ) return {
+            exceptions: null,
+            conditions: null,
+            value: null,
+            errors: [
+                `Rule Not Found: ${ruleId}`
+            ]
+        };
         return this.rules[ ruleId ].evaluate( conditions )
     }
     evaluateAll() {
