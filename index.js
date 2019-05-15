@@ -9,6 +9,7 @@ class RuleEvaluator {
         conditions
     }) {
         this.rules = {};
+        this.conditions = conditions;
         if( serviceAhj && definitions ){
             Object.keys( definitions.rules )
                 .map( id => {
