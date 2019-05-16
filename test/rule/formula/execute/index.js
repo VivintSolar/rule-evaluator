@@ -1,7 +1,7 @@
-const Evaluator = require('../../../index');
+const Evaluator = require('../../../../index');
 const expected = require('./expected-results');
 const assert = require('assert');
-const assocObj = require('../../associationObject');
+const assocObj = require('../../../associationObject');
 
 
 module.exports = () => {
