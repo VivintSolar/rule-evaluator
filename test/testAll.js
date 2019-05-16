@@ -8,8 +8,9 @@ const getAppliedStatement = require('./rule/getAppliedStatement/index');
 const getPossibleStatements = require('./rule/getPossibleStatements/index');
 const getUnsupportedStatements = require('./rule/getUnsupportedStatements/index');
 const evaluate = require('./rule/evaluate/index');
-const execute = require('./rule/execute/index');
-const formulaParenthesis = require('./rule/formulaParenthesis/index');
+const execute = require('./rule/formula/execute/index');
+const formulaParenthesis = require('./rule/formula/formulaParenthesis/index');
+const parameterSubsets = require('./rule/formula/parameterSubsets/index');
 
 
 
@@ -26,3 +27,4 @@ getUnsupportedStatements();
 evaluate();
 execute();
 formulaParenthesis();
+parameterSubsets();
