@@ -33,8 +33,6 @@ module.exports = () => {
 
     evaluated = ruleEvaluator.evaluate( conditions );
 
-    console.log('evaluated:::::::\n',evaluated);
-
     assert.equal( expected2, JSON.stringify(evaluated) );
     console.log('RULE --- Formula Parenthesis 2---> Success!!!!!!!!!');
 

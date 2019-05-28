@@ -15,9 +15,6 @@ module.exports = () => {
 
     const evaluated = ruleEvaluator.evaluate( conditions );
 
-    console.log(':::::::: evaluated ::::::::\,',evaluated);
-    console.log(':::::::: evaluated ::::::::');
-
     assert.equal( expected, JSON.stringify(evaluated) );
     console.log('RULE --- Union 1---> Success!!!!!!!!!');
 
