@@ -13,6 +13,19 @@ module.exports = {
                         "value": "(cecAcSystemSize * 1000) * (designFactor / 100) * 0.2"
                     }
                 ]
+            },
+            "epbbFormula2": {
+                "id": "epbbFormula2",
+                "source": {
+                    "id": "6b07a571-604b-4e5d-a545-0ac3be59de16",
+                    "name": "NV Energy",
+                    "type": "Utility"
+                },
+                "statements": [
+                    {
+                        "value": "5 - (cecAcSystemSize)"
+                    }
+                ]
             }
         }
     },
@@ -27,6 +40,25 @@ module.exports = {
                 "description": "Calculate the expected performance based buy down rebates",
                 "id": "epbbFormula",
                 "name": "Epbb Formula",
+                "rule": true,
+                "tags": [
+                    "utilityRequirementsRuleGroup",
+                    "default"
+                ],
+                "template": {
+                    "dataType": "formula",
+                    "onConflict": "standard"
+                }
+            },
+            "epbbFormula2": {
+                "allowableConditions": [
+                    "systemSizeDc",
+                    "designFactor",
+                    "cecAcSystemSize"
+                ],
+                "description": "Calculate the expected performance based buy down rebates",
+                "id": "epbbFormula2",
+                "name": "Epbb Formula 2",
                 "rule": true,
                 "tags": [
                     "utilityRequirementsRuleGroup",

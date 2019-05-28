@@ -1,5 +1,6 @@
 const Evaluator = require('../../../../index');
 const expected = require('./expected-results');
+const expected2 = require('./expected-results2');
 const assert = require('assert');
 const assocObj = require('./associationObject');
 
@@ -7,9 +8,9 @@ const assocObj = require('./associationObject');
 module.exports = () => {
     const evaluator = new Evaluator( assocObj );
 
-    const ruleId = 'epbbFormula';
+    let ruleId = 'epbbFormula';
 
-    const ruleEvaluator = evaluator.getRule( ruleId );
+    let ruleEvaluator = evaluator.getRule( ruleId );
 
     let conditions = {
         systemSizeDc: 0,
@@ -20,5 +21,19 @@ module.exports = () => {
     let evaluated = ruleEvaluator.evaluate( conditions );
 
     assert.equal( expected, JSON.stringify(evaluated) );
-    console.log('RULE --- Formula Parenthesis ---> Success!!!!!!!!!');
+    console.log('RULE --- Formula Parenthesis 1---> Success!!!!!!!!!');
+
+    ruleId = 'epbbFormula2';
+
+    ruleEvaluator = evaluator.getRule( ruleId );
+
+    conditions = {
+        cecAcSystemSize: 4
+    };
+
+    evaluated = ruleEvaluator.evaluate( conditions );
+
+    assert.equal( expected2, JSON.stringify(evaluated) );
+    console.log('RULE --- Formula Parenthesis 2---> Success!!!!!!!!!');
+
 };
