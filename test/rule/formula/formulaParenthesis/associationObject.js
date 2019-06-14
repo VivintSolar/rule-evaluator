@@ -26,6 +26,27 @@ module.exports = {
                         "value": "5 - (cecAcSystemSize)"
                     }
                 ]
+            },
+            "epbbFormula3": {
+                "id": "epbbFormula3",
+                "source": {
+                    "id": "8cc558a4-9a97-4ef5-9e34-f535d3e0c21c",
+                    "name": "Connecticut",
+                    "type": "State"
+                },
+                "statements": [
+                    {
+                        "condition": [
+                            {
+                                "left": "designFactor",
+                                "operator": "<",
+                                "right": 75
+                            }
+                        ],
+                        "description": "Condition 16",
+                        "value": "((10000 * 0.547) + ((dcPtcSystemSize * 1000) - 10000) * 0.473) * (designFactor / 100) * systemAdjustmentFactor"
+                    }
+                ]
             }
         }
     },
@@ -59,6 +80,25 @@ module.exports = {
                 "description": "Calculate the expected performance based buy down rebates",
                 "id": "epbbFormula2",
                 "name": "Epbb Formula 2",
+                "rule": true,
+                "tags": [
+                    "utilityRequirementsRuleGroup",
+                    "default"
+                ],
+                "template": {
+                    "dataType": "formula",
+                    "onConflict": "standard"
+                }
+            },
+            "epbbFormula3": {
+                "allowableConditions": [
+                    "designFactor",
+                    "systemAdjustmentFactor",
+                    "dcPtcSystemSize"
+                ],
+                "description": "Calculate the expected performance based buy down rebates",
+                "id": "epbbFormula3",
+                "name": "Epbb Formula 3",
                 "rule": true,
                 "tags": [
                     "utilityRequirementsRuleGroup",
@@ -123,6 +163,42 @@ module.exports = {
                 ],
                 "template": {
                     "dataType": "number"
+                }
+            },
+            "systemAdjustmentFactor": {
+                "applyTo": [
+                    "epbbFormula"
+                ],
+                "condition": true,
+                "description": "System Adjustment Factor",
+                "id": "systemAdjustmentFactor",
+                "name": "System Adjustment Factor",
+                "tags": [
+                    "electrical",
+                    "design",
+                    "surveyor"
+                ],
+                "template": {
+                    "dataType": "number"
+                }
+            },
+            "dcPtcSystemSize": {
+                "applyTo": [
+                    "epbbFormula",
+                    "proratedPtcDcSystemSize"
+                ],
+                "condition": true,
+                "description": "DC PTC System Size",
+                "id": "dcPtcSystemSize",
+                "name": "DC PTC System Size",
+                "tags": [
+                    "electrical",
+                    "design",
+                    "surveyor"
+                ],
+                "template": {
+                    "dataType": "number",
+                    "units": "KW"
                 }
             }
         }
