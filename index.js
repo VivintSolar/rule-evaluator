@@ -2,6 +2,8 @@ const Rule = require('./lib/rule/index');
 const { getAppliedConditions, pick } = require('./lib/utilities/util');
 const execute = require('./lib/execute');
 
+//VERSION: 1.1.10
+
 class RuleEvaluator {
     constructor({
         serviceAhj,

@@ -4,32 +4,6 @@ module.exports = {
             "epbbFormula": {
                 "id": "epbbFormula",
                 "source": {
-                    "id": "6b07a571-604b-4e5d-a545-0ac3be59de16",
-                    "name": "NV Energy",
-                    "type": "Utility"
-                },
-                "statements": [
-                    {
-                        "value": "(cecAcSystemSize * 1000) * (designFactor / 100) * 0.2"
-                    }
-                ]
-            },
-            "epbbFormula2": {
-                "id": "epbbFormula2",
-                "source": {
-                    "id": "6b07a571-604b-4e5d-a545-0ac3be59de16",
-                    "name": "NV Energy",
-                    "type": "Utility"
-                },
-                "statements": [
-                    {
-                        "value": "5 - (cecAcSystemSize)"
-                    }
-                ]
-            },
-            "epbbFormula3": {
-                "id": "epbbFormula3",
-                "source": {
                     "id": "8cc558a4-9a97-4ef5-9e34-f535d3e0c21c",
                     "name": "Connecticut",
                     "type": "State"
@@ -47,6 +21,76 @@ module.exports = {
                         "value": "((10000 * 0.547) + ((dcPtcSystemSize * 1000) - 10000) * 0.473) * (designFactor / 100) * systemAdjustmentFactor"
                     }
                 ]
+            },
+            "orderTest":{
+                "id": "orderTest",
+                "source": {
+                    "id": "8cc558a4-9a97-4ef5-9e34-f535d3e0c21c",
+                    "name": "Connecticut",
+                    "type": "State"
+                },
+                "statements": [
+                    {
+                        "condition": [
+                            {
+                                "left": "scenarios",
+                                "operator": "=",
+                                "right": 1
+                            }
+                        ],
+                        "value": "2 + 4 * 5"
+                    },
+                    {
+                        "condition": [
+                            {
+                                "left": "scenarios",
+                                "operator": "=",
+                                "right": 2
+                            }
+                        ],
+                        "value": "2 + 4 * 5 + 5 * 8 + 12 + 3 - 4 / 2 * 4"
+                    },
+                    {
+                        "condition": [
+                            {
+                                "left": "scenarios",
+                                "operator": "=",
+                                "right": 3
+                            }
+                        ],
+                        "value": "25"
+                    },
+                    {
+                        "condition": [
+                            {
+                                "left": "scenarios",
+                                "operator": "=",
+                                "right": 4
+                            }
+                        ],
+                        "value": "8 + ((4 + 9 - 4) + 5) + (3 - 2) + 2"
+                    },
+                    {
+                        "condition": [
+                            {
+                                "left": "scenarios",
+                                "operator": "=",
+                                "right": 5
+                            }
+                        ],
+                        "value": "8 + ((4 + 9 - 4) + 5) + (3 - 2) + 2 * 5"
+                    },
+                    {
+                        "condition": [
+                            {
+                                "left": "scenarios",
+                                "operator": "=",
+                                "right": 6
+                            }
+                        ],
+                        "value": "1 * 2 * 3 * 4 * 5 / 2 + (5 - 3) * 2 / 2 + 1"
+                    }
+                ]
             }
         }
     },
@@ -54,9 +98,9 @@ module.exports = {
         "rules": {
             "epbbFormula": {
                 "allowableConditions": [
-                    "systemSizeDc",
                     "designFactor",
-                    "cecAcSystemSize"
+                    "systemAdjustmentFactor",
+                    "dcPtcSystemSize"
                 ],
                 "description": "Calculate the expected performance based buy down rebates",
                 "id": "epbbFormula",
@@ -71,34 +115,13 @@ module.exports = {
                     "onConflict": "standard"
                 }
             },
-            "epbbFormula2": {
+            "orderTest": {
                 "allowableConditions": [
-                    "systemSizeDc",
-                    "designFactor",
-                    "cecAcSystemSize"
+                    "scenarios"
                 ],
-                "description": "Calculate the expected performance based buy down rebates",
-                "id": "epbbFormula2",
-                "name": "Epbb Formula 2",
-                "rule": true,
-                "tags": [
-                    "utilityRequirementsRuleGroup",
-                    "default"
-                ],
-                "template": {
-                    "dataType": "formula",
-                    "onConflict": "standard"
-                }
-            },
-            "epbbFormula3": {
-                "allowableConditions": [
-                    "designFactor",
-                    "systemAdjustmentFactor",
-                    "dcPtcSystemSize"
-                ],
-                "description": "Calculate the expected performance based buy down rebates",
-                "id": "epbbFormula3",
-                "name": "Epbb Formula 3",
+                "description": "To Test Order Of Operations",
+                "id": "orderTest",
+                "name": "Order Test",
                 "rule": true,
                 "tags": [
                     "utilityRequirementsRuleGroup",
@@ -111,43 +134,19 @@ module.exports = {
             }
         },
         "conditions": {
-            "cecAcSystemSize": {
+            "scenarios": {
                 "applyTo": [
-                    "epbbFormula"
+                    "orderTest"
                 ],
                 "condition": true,
-                "description": "CEC-AC System Size",
-                "id": "cecAcSystemSize",
-                "name": "CEC-AC System Size",
+                "description": "Scenarios",
+                "id": "scenarios",
+                "name": "Scenarios",
                 "tags": [
-                    "electrical",
-                    "design",
-                    "surveyor"
+                    "design"
                 ],
                 "template": {
-                    "dataType": "number",
-                    "units": "KW"
-                }
-            },
-            "systemSizeDc": {
-                "applyTo": [
-                    "epbbFormula"
-                ],
-                "condition": true,
-                "description": "DC System Size",
-                "id": "systemSizeDc",
-                "name": "DC System Size",
-                "tags": [
-                    "electrical",
-                    "design",
-                    "surveyor"
-                ],
-                "template": {
-                    "dataType": "number",
-                    "range": {
-                        "min": 0
-                    },
-                    "units": "KW"
+                    "dataType": "number"
                 }
             },
             "designFactor": {

@@ -11,6 +11,7 @@ const evaluate = require('./rule/evaluate/index');
 const execute = require('./rule/formula/execute/index');
 const formulaParenthesis = require('./rule/formula/formulaParenthesis/index');
 const parameterSubsets = require('./rule/formula/parameterSubsets/index');
+const orderOfOperations = require('./rule/formula/orderOfOperations/index');
 
 
 
@@ -28,3 +29,4 @@ evaluate();
 execute();
 formulaParenthesis();
 parameterSubsets();
+orderOfOperations();
