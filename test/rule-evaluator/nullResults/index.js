@@ -7,7 +7,7 @@ const expected = require('./expected-results');
 module.exports = () => {
 
     const ruleEvaluator = new RuleEvaluator(assocObject);
-    const rulesToTest = [ ...Object.keys(assocObject.serviceAhj.rules), 'fakeRule'];
+    const rulesToTest = [ ...Object.keys(assocObject.ahj.rules), 'fakeRule'];
 
     const results = {};
     rulesToTest.map( ruleId => {
