@@ -1,5 +1,5 @@
 module.exports = {
-    "serviceAhj": {
+    "ahj": {
         "rules": {
             "testRequirementObject": {
                 "statements": [

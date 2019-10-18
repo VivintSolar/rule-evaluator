@@ -2,20 +2,20 @@ const Rule = require('./lib/rule/index');
 const { getAppliedConditions, pick } = require('./lib/utilities/util');
 const execute = require('./lib/execute');
 
-//VERSION: 1.1.11
+//VERSION: 1.2.0
 
 class RuleEvaluator {
     constructor({
-        serviceAhj,
+        ahj,
         definitions,
         conditions
     }) {
         this.rules = {};
         this.conditions = conditions;
-        if( serviceAhj && definitions ){
+        if( ahj && definitions ){
             Object.keys( definitions.rules )
                 .map( id => {
-                    const appliedRule = serviceAhj.rules[ id ];
+                    const appliedRule = ahj.rules[ id ];
                     const ruleDefinition = definitions.rules[ id ];
                     if( appliedRule ){
                         const appliedConditionIds = getAppliedConditions(

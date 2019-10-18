@@ -1,5 +1,5 @@
 module.exports = {
-    "serviceAhj": {
+    "ahj": {
         "rules": {
             "permitOfficeRequirements": {
                 "name": "Permit Office Requirements",
