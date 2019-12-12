@@ -2,7 +2,7 @@ const Rule = require('./lib/rule/index');
 const { getAppliedConditions, pick } = require('./lib/utilities/util');
 const execute = require('./lib/execute');
 
-//VERSION: 1.2.1
+//VERSION: 1.2.2
 
 class RuleEvaluator {
     constructor({
