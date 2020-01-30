@@ -46,7 +46,7 @@ module.exports = {
                             {
                                 "left": "powerclerkUsageOffsetPercentage",
                                 "operator": ">",
-                                "right": 100
+                                "right": 200
                             },
                             {
                                 "left": "proratedPtcDcSystemSizeCondition",
