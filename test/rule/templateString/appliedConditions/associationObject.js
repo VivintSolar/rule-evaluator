@@ -4,8 +4,8 @@ module.exports = {
             "kennyTemplateString": {
                 "statements": [
                     {
-                        "description": "Condition One - param1: System Size AC, param2: System Size DC, param3: Design Factor",
-                        "value": "Condition One - param1: {systemSizeAc}, param2: {systemSizeDc}, param3: Design Factor",
+                        "description": "Condition One - param1: (System Size AC), param2: (System Size DC), param3: (Design Factor)",
+                        "value": "Condition One - param1: {systemSizeAc}, param2: {systemSizeDc}, param3: {designFactor}",
                         "condition": [
                             {
                                 "left": "designFactor",
@@ -15,17 +15,35 @@ module.exports = {
                         ]
                     },
                     {
-                        "value": "Condition Two - param1: {systemSizeAc}, param2: {systemSizeDc}, param3: {designFactor}",
+                        "description": "Condition Two - param1: (CEC AC System Size), param2: (Contract Type), param3: (Design Factor)",
+                        "value": "Condition Two - param1: {cecAcSystemSize}, param2: {contractType}, param3: {designFactor}",
                         "condition": [
                             {
                                 "left": "designFactor",
                                 "operator": ">",
                                 "right": 74
+                            },
+                            {
+                                "left": "cecAcSystemSize",
+                                "operator": "<",
+                                "right": 200
                             }
                         ]
                     },
                     {
-                        "value": "Condition Three - Default Condition - param1: {systemSizeAc}, param2: {systemSizeDc}, param3: {designFactor}",
+                        "description": "Condition Three - Contract Type #1: (Contract Type), Contract Type #2: (Contract Type), Contract Type #3: (Contract Type)",
+                        "value": "Condition Three - Contract Type #1: {contractType}, Contract Type #2: {contractType}, Contract Type #3: {contractType}",
+                        "condition":[
+                            {
+                                "left": "contractType",
+                                "operator": "=",
+                                "right": "ppa"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Condition Four - Default Condition - param1: (Contract Type), param2: (System Size DC), param3: (System Size AC)",
+                        "value": "Condition Four - Default Condition - param1: {contractType}, param2: {systemSizeDc}, param3: {systemSizeAc}"
                     }
                 ],
                 "id": "kennyTemplateString",

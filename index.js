@@ -1,8 +1,10 @@
 const Rule = require('./lib/rule/index');
 const { getAppliedConditions, pick } = require('./lib/utilities/util');
 const execute = require('./lib/execute');
+const executeTemplateString = require('./lib/execute/executeTemplateString');
+const executeFormula = require('./lib/execute/executeFormula');
 
-//VERSION: 1.2.2
+//VERSION: 1.3.0
 
 class RuleEvaluator {
     constructor({
@@ -82,6 +84,8 @@ class RuleEvaluator {
 }
 
 RuleEvaluator.prototype.execute = execute;
+RuleEvaluator.prototype.executeTemplateString = executeTemplateString;
+RuleEvaluator.prototype.executeFormula = executeFormula;
 
 
 module.exports = RuleEvaluator;
