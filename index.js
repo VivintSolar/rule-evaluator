@@ -1,5 +1,6 @@
 const Rule = require('./lib/rule/index');
-const { getAppliedConditions, pick } = require('./lib/utilities/util');
+const { pick } = require('./lib/utilities/util');
+const getAppliedConditions = require('./lib/utilities/getAppliedConditions');
 const execute = require('./lib/execute');
 const executeTemplateString = require('./lib/execute/executeTemplateString');
 const executeFormula = require('./lib/execute/executeFormula');
