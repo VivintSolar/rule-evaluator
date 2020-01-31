@@ -18,7 +18,7 @@ module.exports = () => {
     let evaluated = ruleEvaluator.evaluate( conditions );
 
     assert.equal( expected.singleParam, JSON.stringify(evaluated) );
-    console.log('RULE --- execute.singleParam ---> Success!!!!!!!!!');
+    console.log('RULE --- Formula --- execute.singleParam ---> Success!!!!!!!!!');
 
     conditions = {
         squareFootage: 1800,
@@ -29,10 +29,10 @@ module.exports = () => {
     evaluated = ruleEvaluator.evaluate( conditions );
 
     assert.equal( expected.withConditions, JSON.stringify(evaluated) );
-    console.log('RULE --- execute.withConditions ---> Success!!!!!!!!!');
+    console.log('RULE --- Formula --- execute.withConditions ---> Success!!!!!!!!!');
 
     evaluated = ruleEvaluator.evaluate( null );
 
     assert.equal( expected.withErrors, JSON.stringify(evaluated) );
-    console.log('RULE --- execute.withErrors ---> Success!!!!!!!!!');
+    console.log('RULE --- Formula --- execute.withErrors ---> Success!!!!!!!!!');
 };

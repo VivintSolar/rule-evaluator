@@ -46,5 +46,5 @@ module.exports = () => {
     const evaluations = { test1, test2 };
 
     assert.equal( expected, JSON.stringify(evaluations) );
-    console.log('RULE --- Parameter Subsets ---> Success!!!!!!!!!');
+    console.log('RULE --- Formula --- Parameter Subsets ---> Success!!!!!!!!!');
 };

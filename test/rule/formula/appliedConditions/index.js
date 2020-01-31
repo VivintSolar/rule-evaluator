@@ -27,7 +27,7 @@ module.exports = () => {
     const evaluated = ruleEvaluator.evaluate( conditions );
 
     assert.equal( expected, JSON.stringify(evaluated) );
-    console.log('RULE ---Applied Conditions 1 ---> Success!!!!!!!!!');
+    console.log('RULE --- Formula --- Applied Conditions 1 ---> Success!!!!!!!!!');
 
     conditions = {
         cecACSystemSize: 8.67834,
@@ -44,6 +44,6 @@ module.exports = () => {
 
 
     assert.equal( expected2, JSON.stringify(evaluated2) );
-    console.log('RULE ---Applied Conditions 2 ---> Success!!!!!!!!!');
+    console.log('RULE --- Formula --- Applied Conditions 2 ---> Success!!!!!!!!!');
 
 };

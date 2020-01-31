@@ -22,7 +22,7 @@ module.exports = () => {
     let evaluated = ruleEvaluator.evaluate( conditions );
 
     assert.equal( expected, JSON.stringify(evaluated) );
-    console.log('RULE --- Formula Parenthesis 1---> Success!!!!!!!!!');
+    console.log('RULE --- Formula --- Formula Parenthesis 1 ---> Success!!!!!!!!!');
 
     ruleId = 'epbbFormula2';
 
@@ -35,7 +35,7 @@ module.exports = () => {
     evaluated = ruleEvaluator.evaluate( conditions );
 
     assert.equal( expected2, JSON.stringify(evaluated) );
-    console.log('RULE --- Formula Parenthesis 2---> Success!!!!!!!!!');
+    console.log('RULE --- Formula --- Formula Parenthesis 2 ---> Success!!!!!!!!!');
 
     ruleId = 'epbbFormula3';
 
@@ -49,5 +49,5 @@ module.exports = () => {
 
     evaluated = ruleEvaluator.evaluate( conditions );
     assert.equal( expected3, JSON.stringify(evaluated) );
-    console.log('RULE --- Formula Parenthesis 3---> Success!!!!!!!!!');
+    console.log('RULE --- Formula --- Formula Parenthesis 3 ---> Success!!!!!!!!!');
 };
