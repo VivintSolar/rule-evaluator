@@ -5,7 +5,7 @@ const execute = require('./lib/execute');
 const executeTemplateString = require('./lib/execute/executeTemplateString');
 const executeFormula = require('./lib/execute/executeFormula');
 
-//VERSION: 1.3.1
+//VERSION: 1.3.2
 
 class RuleEvaluator {
     constructor({
