@@ -29,6 +29,7 @@ module.exports = () => {
     console.log('RULE --- Template String --- Applied Conditions 1 ---> Success!!!!!!!!!');
 
     //To get default statement
+    evaluator.clearConditions();
     conditions = {
         contractType: "cash", // needs to swap out this id for the name of this enum item
         systemSizeDc: 1225,

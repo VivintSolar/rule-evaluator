@@ -24,7 +24,7 @@ module.exports = () => {
     ruleId = 'orderTest';
 
     ruleEvaluator = evaluator.getRule( ruleId );
-
+    evaluator.clearConditions();
     conditions = {
         scenarios: 1
     };
@@ -36,7 +36,7 @@ module.exports = () => {
     ruleId = 'orderTest';
 
     ruleEvaluator = evaluator.getRule( ruleId );
-
+    evaluator.clearConditions();
     conditions = {
         scenarios: 2
     };
@@ -48,7 +48,7 @@ module.exports = () => {
     ruleId = 'orderTest';
 
     ruleEvaluator = evaluator.getRule( ruleId );
-
+    evaluator.clearConditions();
     conditions = {
         scenarios: 3
     };
@@ -60,7 +60,7 @@ module.exports = () => {
     ruleId = 'orderTest';
 
     ruleEvaluator = evaluator.getRule( ruleId );
-
+    evaluator.clearConditions();
     conditions = {
         scenarios: 4
     };
@@ -72,7 +72,7 @@ module.exports = () => {
     ruleId = 'orderTest';
 
     ruleEvaluator = evaluator.getRule( ruleId );
-
+    evaluator.clearConditions();
     conditions = {
         scenarios: 5
     };
@@ -84,7 +84,7 @@ module.exports = () => {
     ruleId = 'orderTest';
 
     ruleEvaluator = evaluator.getRule( ruleId );
-
+    evaluator.clearConditions();
     conditions = {
         scenarios: 6
     };
