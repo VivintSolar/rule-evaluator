@@ -27,7 +27,7 @@ module.exports = () => {
     ruleId = 'epbbFormula2';
 
     ruleEvaluator = evaluator.getRule( ruleId );
-
+    evaluator.clearConditions();
     conditions = {
         cecAcSystemSize: 4
     };
@@ -40,7 +40,7 @@ module.exports = () => {
     ruleId = 'epbbFormula3';
 
     ruleEvaluator = evaluator.getRule( ruleId );
-
+    evaluator.clearConditions();
     conditions = {
         designFactor: 55.6,
         systemAdjustmentFactor: 0.846,

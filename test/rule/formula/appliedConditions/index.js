@@ -29,6 +29,7 @@ module.exports = () => {
     assert.equal( expected, JSON.stringify(evaluated) );
     console.log('RULE --- Formula --- Applied Conditions 1 ---> Success!!!!!!!!!');
 
+    evaluator.clearConditions();
     conditions = {
         cecACSystemSize: 8.67834,
         designFactor: 45.3,

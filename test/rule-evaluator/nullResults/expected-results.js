@@ -56,7 +56,7 @@ module.exports = JSON.stringify(
             "conditions": null,
             "value": null,
             "errors": [
-                "Required Parameter Missing Square Footage"
+                'Required Condition Parameter Input Missing; Square Footage'
             ]
         },
         "fakeRule": {
