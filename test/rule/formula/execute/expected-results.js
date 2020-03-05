@@ -9,7 +9,8 @@ module.exports = {
             conditions: null,
             source: {"id": "id", "type": "type", "name": "name"},
             value: 5000,
-            errors: null
+            errors: [ 'Required Condition Input Missing; Service Elevation',
+                'Required Condition Parameter Input Missing; AC System Size' ]
         }
     ),
     withConditions: JSON.stringify(
@@ -30,7 +31,8 @@ module.exports = {
             conditions: null,
             source: {"id": "id", "type": "type", "name": "name"},
             value: null,
-            errors: ["Required Parameter Missing Square Footage"]
+            errors: [ 'Required Condition Input Missing; Service Elevation',
+                'Required Condition Parameter Input Missing; Square Footage, AC System Size' ]
         }
     )
 };

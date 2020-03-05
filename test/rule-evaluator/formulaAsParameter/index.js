@@ -47,7 +47,7 @@ module.exports = () => {
     conditions = {
         numberConditionForTestFormula: 0
     };
-    const evaluated3 = ruleEvaluator.evaluateStrict(ruleId, conditions);
+    const evaluated3 = ruleEvaluator.evaluate(ruleId, conditions);
 
     console.log('evaluated3:::::',evaluated3);
 

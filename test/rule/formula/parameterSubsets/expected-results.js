@@ -3,69 +3,84 @@ module.exports = JSON.stringify(
         test1: [
             {
                 formula: 'cecAcSystemSize',
+                templateString: undefined,
                 exceptions: null,
                 conditions: null,
                 source: undefined,
                 description: undefined,
                 value: 1,
-                errors: null
+                errors:
+                    ['Required Condition Parameter Input Missing; DC System Size, Design Factor, DC PTC System Size, Powerclerk Production Amount, Powerclerk Usage Offset Percentage, System Adjustment Factor, Usage Amount']
             },
             {
                 formula: 'cecAcSystemSize',
+                templateString: undefined,
                 exceptions: null,
                 conditions: null,
                 source: undefined,
                 description: undefined,
                 value: 1,
-                errors: null
+                errors:
+                    ['Required Condition Parameter Input Missing; Design Factor, DC PTC System Size, Powerclerk Production Amount, Powerclerk Usage Offset Percentage, System Adjustment Factor, Usage Amount']
             },
             {
                 formula: 'cecAcSystemSize',
+                templateString: undefined,
                 exceptions: null,
                 conditions: null,
                 source: undefined,
                 description: undefined,
                 value: 1,
-                errors: null
+                errors:
+                    ['Required Condition Parameter Input Missing; DC PTC System Size, Powerclerk Production Amount, Powerclerk Usage Offset Percentage, System Adjustment Factor, Usage Amount']
             },
             {
                 formula: 'cecAcSystemSize',
+                templateString: undefined,
                 exceptions: null,
                 conditions: null,
                 source: undefined,
                 description: undefined,
                 value: 1,
-                errors: null
+                errors:
+                    ['Required Condition Parameter Input Missing; Powerclerk Production Amount, Powerclerk Usage Offset Percentage, System Adjustment Factor, Usage Amount']
             },
             {
                 formula: 'cecAcSystemSize',
+                templateString: undefined,
                 exceptions: null,
                 conditions: null,
                 source: undefined,
                 description: undefined,
                 value: 1,
-                errors: null
+                errors:
+                    ['Required Condition Parameter Input Missing; Powerclerk Usage Offset Percentage, System Adjustment Factor, Usage Amount']
             },
             {
                 formula: 'cecAcSystemSize',
+                templateString: undefined,
                 exceptions: null,
                 conditions: null,
                 source: undefined,
                 description: undefined,
                 value: 1,
-                errors: null
+                errors:
+                    ['Required Condition Parameter Input Missing; System Adjustment Factor, Usage Amount']
             },
             {
                 formula: 'cecAcSystemSize',
+                templateString: undefined,
                 exceptions: null,
                 conditions: null,
                 source: undefined,
                 description: undefined,
                 value: 1,
-                errors: null
+                errors:
+                    ['Required Condition Parameter Input Missing; Usage Amount']
             },
             {
                 formula: 'cecAcSystemSize',
+                templateString: undefined,
                 exceptions: null,
                 conditions: null,
                 source: undefined,
@@ -77,102 +92,89 @@ module.exports = JSON.stringify(
         test2: [
             {
                 formula: 'cecAcSystemSize',
+                templateString: undefined,
                 exceptions: null,
                 conditions: null,
                 source: undefined,
                 description: undefined,
                 value: 1,
-                errors: [
-                    'Required Parameter Missing DC System Size',
-                    'Required Parameter Missing Design Factor',
-                    'Required Parameter Missing DC PTC System Size',
-                    'Required Parameter Missing Powerclerk Production Amount',
-                    'Required Parameter Missing Powerclerk Usage Offset Percentage',
-                    'Required Parameter Missing System Adjustment Factor',
-                    'Required Parameter Missing Usage Amount'
-                ]
+                errors:
+                    ['Required Condition Parameter Input Missing; DC System Size, Design Factor, Powerclerk Usage Offset Percentage, System Adjustment Factor, Powerclerk Production Amount, Usage Amount, DC PTC System Size']
             },
             {
                 formula: 'cecAcSystemSize + systemSizeDc',
+                templateString: undefined,
                 exceptions: null,
                 conditions: null,
                 source: undefined,
                 description: undefined,
                 value: 2,
-                errors: [
-                    'Required Parameter Missing Design Factor',
-                    'Required Parameter Missing DC PTC System Size',
-                    'Required Parameter Missing Powerclerk Production Amount',
-                    'Required Parameter Missing Powerclerk Usage Offset Percentage',
-                    'Required Parameter Missing System Adjustment Factor',
-                    'Required Parameter Missing Usage Amount'
-                ]
+                errors:
+                    ['Required Condition Parameter Input Missing; Design Factor, Powerclerk Usage Offset Percentage, System Adjustment Factor, Powerclerk Production Amount, Usage Amount, DC PTC System Size']
             },
             {
                 formula: 'cecAcSystemSize + systemSizeDc + designFactor',
+                templateString: undefined,
                 exceptions: null,
                 conditions: null,
                 source: undefined,
                 description: undefined,
                 value: 3,
-                errors: [
-                    'Required Parameter Missing DC PTC System Size',
-                    'Required Parameter Missing Powerclerk Production Amount',
-                    'Required Parameter Missing Powerclerk Usage Offset Percentage',
-                    'Required Parameter Missing System Adjustment Factor',
-                    'Required Parameter Missing Usage Amount'
-                ]
+                errors:
+                    ['Required Condition Parameter Input Missing; Powerclerk Usage Offset Percentage, System Adjustment Factor, Powerclerk Production Amount, Usage Amount, DC PTC System Size']
             },
             {
-                formula: 'cecAcSystemSize + systemSizeDc + designFactor + dcPtcSystemSize',
+                formula:
+                    'cecAcSystemSize + systemSizeDc + designFactor + dcPtcSystemSize',
+                templateString: undefined,
                 exceptions: null,
                 conditions: null,
                 source: undefined,
                 description: undefined,
                 value: 4,
-                errors: [
-                    'Required Parameter Missing Powerclerk Production Amount',
-                    'Required Parameter Missing Powerclerk Usage Offset Percentage',
-                    'Required Parameter Missing System Adjustment Factor',
-                    'Required Parameter Missing Usage Amount'
-                ]
+                errors:
+                    ['Required Condition Parameter Input Missing; Powerclerk Usage Offset Percentage, System Adjustment Factor, Powerclerk Production Amount, Usage Amount']
             },
             {
-                formula: 'cecAcSystemSize + systemSizeDc + designFactor + dcPtcSystemSize + powerclerkProductionAmount',
+                formula:
+                    'cecAcSystemSize + systemSizeDc + designFactor + dcPtcSystemSize + powerclerkProductionAmount',
+                templateString: undefined,
                 exceptions: null,
                 conditions: null,
                 source: undefined,
                 description: undefined,
                 value: 5,
-                errors: [
-                    'Required Parameter Missing Powerclerk Usage Offset Percentage',
-                    'Required Parameter Missing System Adjustment Factor',
-                    'Required Parameter Missing Usage Amount'
-                ]
+                errors:
+                    ['Required Condition Parameter Input Missing; Powerclerk Usage Offset Percentage, System Adjustment Factor, Usage Amount']
             },
             {
-                formula: 'cecAcSystemSize + systemSizeDc + designFactor + dcPtcSystemSize + powerclerkProductionAmount + powerclerkUsageOffsetPercentage',
+                formula:
+                    'cecAcSystemSize + systemSizeDc + designFactor + dcPtcSystemSize + powerclerkProductionAmount + powerclerkUsageOffsetPercentage',
+                templateString: undefined,
                 exceptions: null,
                 conditions: null,
                 source: undefined,
                 description: undefined,
                 value: 6,
-                errors: [
-                    'Required Parameter Missing System Adjustment Factor',
-                    'Required Parameter Missing Usage Amount'
-                ]
+                errors:
+                    ['Required Condition Parameter Input Missing; System Adjustment Factor, Usage Amount']
             },
             {
-                formula: 'cecAcSystemSize + systemSizeDc + designFactor + dcPtcSystemSize + powerclerkProductionAmount + powerclerkUsageOffsetPercentage + systemAdjustmentFactor',
+                formula:
+                    'cecAcSystemSize + systemSizeDc + designFactor + dcPtcSystemSize + powerclerkProductionAmount + powerclerkUsageOffsetPercentage + systemAdjustmentFactor',
+                templateString: undefined,
                 exceptions: null,
                 conditions: null,
                 source: undefined,
                 description: undefined,
                 value: 7,
-                errors: ['Required Parameter Missing Usage Amount']
+                errors:
+                    ['Required Condition Parameter Input Missing; Usage Amount']
             },
             {
-                formula: 'cecAcSystemSize + systemSizeDc + designFactor + dcPtcSystemSize + powerclerkProductionAmount + powerclerkUsageOffsetPercentage + systemAdjustmentFactor + usageAmount',
+                formula:
+                    'cecAcSystemSize + systemSizeDc + designFactor + dcPtcSystemSize + powerclerkProductionAmount + powerclerkUsageOffsetPercentage + systemAdjustmentFactor + usageAmount',
+                templateString: undefined,
                 exceptions: null,
                 conditions: null,
                 source: undefined,
