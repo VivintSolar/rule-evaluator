@@ -14,6 +14,7 @@ const formulaParenthesis = require('./rule/formula/formulaParenthesis/index');
 const formulaParameterSubsets = require('./rule/formula/parameterSubsets/index');
 const formulaOrderOfOperations = require('./rule/formula/orderOfOperations/index');
 const templateStringAppliedConditions = require('./rule/templateString/appliedConditions/index');
+const templateStringUnion = require('./rule/templateString/union/index');
 
 
 
@@ -36,3 +37,4 @@ formulaParameterSubsets();
 formulaOrderOfOperations();
 
 templateStringAppliedConditions();
+templateStringUnion();
