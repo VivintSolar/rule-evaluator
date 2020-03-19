@@ -11,6 +11,7 @@ module.exports = JSON.stringify(
         ],
         description: "Condition One - param1: (System Size AC), param2: (System Size DC), param3: (Design Factor)",
         value: "Condition One - param1: 50, param2: 1225, param3: 50",
-        errors: null
+        errors: null,
+        id: "kennyTemplateString"
     }
 );

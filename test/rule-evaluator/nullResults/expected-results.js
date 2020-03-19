@@ -8,7 +8,8 @@ module.exports = JSON.stringify(
             "source": null,
             "description": null,
             "value": null,
-            "errors": null
+            "errors": null,
+            "id": "testObject"
         },
         "testEnum": {
             "exceptions": [
@@ -16,7 +17,8 @@ module.exports = JSON.stringify(
             ],
             "conditions": null,
             "value": null,
-            "errors": null
+            "errors": null,
+            "id": "testEnum"
         },
         "testOrderedList": {
             "exceptions": [
@@ -24,7 +26,8 @@ module.exports = JSON.stringify(
             ],
             "conditions": null,
             "value": null,
-            "errors": null
+            "errors": null,
+            "id": "testOrderedList"
         },
         "testBoolean": {
             "exceptions": [
@@ -32,7 +35,8 @@ module.exports = JSON.stringify(
             ],
             "conditions": null,
             "value": null,
-            "errors": null
+            "errors": null,
+            "id": "testBoolean"
         },
         "testString": {
             "exceptions": [
@@ -40,7 +44,8 @@ module.exports = JSON.stringify(
             ],
             "conditions": null,
             "value": null,
-            "errors": null
+            "errors": null,
+            "id": "testString"
         },
         "testNumber": {
             "exceptions": [
@@ -48,7 +53,8 @@ module.exports = JSON.stringify(
             ],
             "conditions": null,
             "value": null,
-            "errors": null
+            "errors": null,
+            "id": "testNumber"
         },
         "testFormula": {
             "formula": "(serviceElevation - squareFootage) / 2",
@@ -57,7 +63,8 @@ module.exports = JSON.stringify(
             "value": null,
             "errors": [
                 'Required Condition Parameter Input Missing; Square Footage'
-            ]
+            ],
+            "id": "testFormula"
         },
         "fakeRule": {
             "exceptions": null,
@@ -65,7 +72,8 @@ module.exports = JSON.stringify(
             "value": null,
             "errors": [
                 "Rule Not Found: fakeRule"
-            ]
+            ],
+            "id": "fakeRule"
         }
     }
 );
