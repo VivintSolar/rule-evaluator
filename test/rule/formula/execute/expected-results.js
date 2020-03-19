@@ -10,7 +10,8 @@ module.exports = {
             source: {"id": "id", "type": "type", "name": "name"},
             value: 5000,
             errors: [ 'Required Condition Input Missing; Service Elevation',
-                'Required Condition Parameter Input Missing; AC System Size' ]
+                'Required Condition Parameter Input Missing; AC System Size' ],
+            id: "alternativeMaxACSystemSizeCalculation"
         }
     ),
     withConditions: JSON.stringify(
@@ -21,7 +22,8 @@ module.exports = {
                 source: {"id": "id", "type": "type", "name": "name"},
                 description: "Service Elevation is greater Than 555ft",
                 value: 425,
-                errors: null
+                errors: null,
+                id: "alternativeMaxACSystemSizeCalculation"
             }
         ),
     withErrors: JSON.stringify(
@@ -32,7 +34,8 @@ module.exports = {
             source: {"id": "id", "type": "type", "name": "name"},
             value: null,
             errors: [ 'Required Condition Input Missing; Service Elevation',
-                'Required Condition Parameter Input Missing; Square Footage, AC System Size' ]
+                'Required Condition Parameter Input Missing; Square Footage, AC System Size' ],
+            id: "alternativeMaxACSystemSizeCalculation"
         }
     )
 };
