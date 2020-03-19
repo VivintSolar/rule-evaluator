@@ -8,6 +8,7 @@ module.exports = JSON.stringify(
         description: "Condition Four - Default Condition - param1: (Contract Type), param2: (System Size DC), param3: (System Size AC)",
         value: "Condition Four - Default Condition - param1: Cash, param2: 1225, param3: 50",
         errors: [ 'Required Condition Input Missing; Design Factor, CEC-AC System Size',
-            'Required Condition Parameter Input Missing; Design Factor, CEC-AC System Size' ]
+            'Required Condition Parameter Input Missing; Design Factor, CEC-AC System Size' ],
+        id: "kennyTemplateString"
     }
 );

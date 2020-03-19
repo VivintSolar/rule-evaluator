@@ -48,5 +48,6 @@ module.exports = JSON.stringify({
         "attrName3": 200,
         "attrName1": 0
     },
-    "errors": [ 'Required Condition Input Missing; Test Enum Condition Unsupported' ]
+    "errors": [ 'Required Condition Input Missing; Test Enum Condition Unsupported' ],
+    "id": "testRequirementObject"
 });

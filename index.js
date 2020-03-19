@@ -3,7 +3,7 @@ const initialize = require('./lib/initialize');
 const executeTemplateString = require('./lib/execute/executeTemplateString');
 const executeFormula = require('./lib/execute/executeFormula');
 
-//VERSION: 1.3.5
+//VERSION: 1.4.0
 
 class RuleEvaluator {
     constructor( parameters ) {
@@ -50,21 +50,18 @@ class RuleEvaluator {
       if( !this.rules[ ruleId ] ) return null;
       return this.rules[ ruleId ];
     }
-    evaluate(ruleId, conditions, strictMode){
+    evaluate(ruleId, conditions){
         this.conditions = conditions;
-        this.strictMode = strictMode;
         if( !this.rules[ ruleId ] ) return {
             exceptions: null,
             conditions: null,
             value: null,
             errors: [
                 `Rule Not Found: ${ruleId}`
-            ]
+            ],
+            id: ruleId
         };
         return this.rules[ ruleId ].evaluate( )
-    }
-    evaluateStrict( ruleId, conditions ){
-        return this.evaluate( ruleId, conditions, true )
     }
     evaluateAll() {
         return Object.assign({},
@@ -85,10 +82,13 @@ class RuleEvaluator {
         if( !this.rules[ ruleId ] ) return null;
         return this.rules[ ruleId ].getPossibleStatements( clientConditions )
     }
-    batchEvaluate( batch ){
-        return batch.map( ({ ruleId, conditions }) => (
-            this.evaluate( ruleId, conditions )
-        ))
+    batchEvaluate( rules, conditions ){
+        this.conditions = conditions;
+        return Object.assign({},
+            ...rules.map( ruleId => ({
+                [ ruleId ]: this.evaluate( ruleId, this.conditions )
+            }))
+        )
     }
 }
 

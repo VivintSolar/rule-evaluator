@@ -3,6 +3,7 @@ const getPossibleStatementsRE = require('./rule-evaluator/getPossibleStatements/
 const getUnsupportedStatementsRE = require('./rule-evaluator/getUnsupportedStatements/index');
 const evaluateRE = require('./rule-evaluator/evaluate/index');
 const nullResultsRE = require('./rule-evaluator/nullResults/index');
+const batchEvaluateSimpleRE = require('./rule-evaluator/batchEvaluate/simple');
 
 const getAppliedStatement = require('./rule/getAppliedStatement/index');
 const getPossibleStatements = require('./rule/getPossibleStatements/index');
@@ -24,6 +25,7 @@ getPossibleStatementsRE();
 getUnsupportedStatementsRE();
 evaluateRE();
 nullResultsRE();
+batchEvaluateSimpleRE();
 
 getAppliedStatement();
 getPossibleStatements();

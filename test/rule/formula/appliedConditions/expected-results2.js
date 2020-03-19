@@ -17,5 +17,7 @@ module.exports = JSON.stringify(
         source: undefined,
         description: undefined,
         value: 1837.626976476,
-        errors: null }
+        errors: null,
+        id: "epbbFormula"
+    }
 );
