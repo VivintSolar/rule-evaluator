@@ -1,3 +1,10 @@
+
+const templateString2TextPortion = "Name: Test String Rule, Value: {testStringRule}.\n" +
+    "Name: Test Boolean Rule, Value: {testBooleanRule}.\n" +
+    "Name: Test Number Rule, Value: {testNumberRule}.\n" +
+    "Name: Test Enum Rule, Value: {testEnumRule}.\n" +
+    "Name: Test Formula Rule 2, Value: {testFormula2}.\n";
+
 module.exports = {
     "ahj": {
         "rules": {
@@ -28,6 +35,25 @@ module.exports = {
                     }
                 ]
             },
+            "testTemplateString2": {
+                "statements": [
+                    {
+                        "condition": [{ "left": "testNumberCondition", "operator": "=", "right": 3 }],
+                        "value": "When Test Number Condition For Test Template String 2 is 3 Then\n" + templateString2TextPortion
+                    },
+                    {
+                        "condition": [{ "left": "testNumberCondition", "operator": "=", "right": 2 }],
+                        "value": "When Test Number Condition For Test Template String 2 is 2 Then\n" + templateString2TextPortion
+                    },
+                    {
+                        "condition": [{ "left": "testNumberCondition", "operator": "=", "right": 1 }],
+                        "value": "When Test Number Condition For Test Template String 2 is 1 Then\n" + templateString2TextPortion
+                    },
+                    {
+                        "value": "Default:::\n" + templateString2TextPortion
+                    }
+                ]
+            },
             "testFormula": {
                 "statements": [
                     {
@@ -44,6 +70,83 @@ module.exports = {
                     },
                     { "value": "serviceElevation - squareFootage" }
                 ]
+            },
+            "testFormula2": {
+                "statements": [
+                    {
+                        "condition": [{ "left": "testNumberCondition", "operator": "=", "right": 3 }],
+                        "value": "testNumberRule + testNumberRule + testNumberRule"
+                    },
+                    {
+                        "condition": [{ "left": "testNumberCondition", "operator": "=", "right": 2 }],
+                        "value": "testNumberRule + testNumberRule"
+                    },
+                    {
+                        "condition": [{ "left": "testNumberCondition", "operator": "=", "right": 1 }],
+                        "value": "testNumberRule"
+                    },
+                    { "value": "0" }
+                ]
+            },
+            "testNumberRule": {
+                "statements": [
+                    {
+                        "condition": [{ "left": "testNumberCondition", "operator": "=", "right": 3 }],
+                        "value": 3
+                    },
+                    {
+                        "condition": [{ "left": "testNumberCondition", "operator": "=", "right": 2 }],
+                        "value": 2
+                    },
+                    {
+                        "condition": [{ "left": "testNumberCondition", "operator": "=", "right": 1 }],
+                        "value": 1
+                    },
+                    { "value": 0 }
+                ]
+            },
+            "testStringRule": {
+                "statements": [
+                    {
+                        "condition": [{ "left": "testNumberCondition", "operator": "=", "right": 3 }],
+                        "value": "'String 3'"
+                    },
+                    {
+                        "condition": [{ "left": "testNumberCondition", "operator": "=", "right": 2 }],
+                        "value": "'String 2'"
+                    },
+                    {
+                        "condition": [{ "left": "testNumberCondition", "operator": "=", "right": 1 }],
+                        "value": "'String 1'"
+                    },
+                    { "value": "'Default String'" }
+                ]
+            },
+            "testEnumRule": {
+                "statements": [
+                    {
+                        "condition": [{ "left": "testNumberCondition", "operator": "=", "right": 3 }],
+                        "value": "enumOption3"
+                    },
+                    {
+                        "condition": [{ "left": "testNumberCondition", "operator": "=", "right": 2 }],
+                        "value": "enumOption2"
+                    },
+                    {
+                        "condition": [{ "left": "testNumberCondition", "operator": "=", "right": 1 }],
+                        "value": "enumOption1"
+                    },
+                    { "value": "enumOption0" }
+                ]
+            },
+            "testBooleanRule": {
+                "statements": [
+                    {
+                        "condition": [{ "left": "testNumberCondition", "operator": ">", "right": 0 }],
+                        "value": true
+                    },
+                    { "value": false }
+                ]
             }
         }
     },
@@ -57,6 +160,26 @@ module.exports = {
                     "serviceElevation",
                     "squareFootage",
                     "numberConditionForTestFormula"
+                ],
+                "ruleAsParameter":[
+                    "testTemplateString"
+                ],
+                "template":{
+                    "dataType": "formula"
+                }
+            },
+            "testFormula2": {
+                "id": "testFormula2",
+                "name": "Test Formula 2",
+                "description": "Test Formula 2",
+                "allowableConditions": [
+                    "testNumberCondition"
+                ],
+                "ruleAsParameter":[
+                    "testTemplateString2"
+                ],
+                "allowableRuleParameters":[
+                    "testNumberRule"
                 ],
                 "template":{
                     "dataType": "formula"
@@ -76,6 +199,88 @@ module.exports = {
                 ],
                 "template":{
                     "dataType": "template string"
+                }
+            },
+            "testTemplateString2": {
+                "id": "testTemplateString2",
+                "name": "Test Template String 2",
+                "description": "Test Template String 2",
+                "allowableConditions":[
+                    "testNumberCondition"
+                ],
+                "allowableRuleParameters":[
+                    "testNumberRule",
+                    "testStringRule",
+                    "testEnumRule",
+                    "testBooleanRule",
+                    "testFormula2"
+                ],
+                "template":{
+                    "dataType": "template string"
+                }
+            },
+            "testNumberRule": {
+                "id": "testNumberRule",
+                "name": "Test Number Rule",
+                "description": "Test Number Rule",
+                "allowableConditions": [
+                    "testNumberCondition"
+                ],
+                "ruleAsParameter":[
+                    "testTemplateString2",
+                    "testFormula2"
+                ],
+                "template":{
+                    "dataType": "number"
+                }
+            },
+            "testStringRule": {
+                "id": "testStringRule",
+                "name": "Test String Rule",
+                "description": "Test String Rule",
+                "allowableConditions": [
+                    "testNumberCondition"
+                ],
+                "ruleAsParameter":[
+                    "testTemplateString2"
+                ],
+                "template":{
+                    "dataType": "string"
+                }
+            },
+            "testEnumRule": {
+                "id": "testEnumRule",
+                "name": "Test Enum Rule",
+                "description": "Test Enum Rule",
+                "allowableConditions": [
+                    "testNumberCondition"
+                ],
+                "ruleAsParameter":[
+                    "testTemplateString2"
+                ],
+                "template":{
+                    "dataType": "enum",
+                    "items": [
+                        { "id": "enumOption0", "name": "Enum Default Option" },
+                        { "id": "enumOption1", "name": "Enum Option 1" },
+                        { "id": "enumOption2", "name": "Enum Option 2" },
+                        { "id": "enumOption3", "name": "Enum Option 3" }
+                    ]
+                }
+            },
+            "testBooleanRule": {
+                "id": "testBooleanRule",
+                "name": "Test Boolean Rule",
+                "description": "Test Boolean Rule",
+                "allowableConditions": [
+                    "testNumberCondition"
+                ],
+                "ruleAsParameter":[
+                    "testTemplateString2"
+                ],
+                "template":{
+                    "dataType": "boolean",
+                    "display": [ "Yes", "No" ]
                 }
             }
         },
@@ -130,18 +335,6 @@ module.exports = {
                 "id": "numberConditionForTestFormula",
                 "name": "Number Condition For Test Formula"
             },
-            "testStringCondition":{
-                "applyTo": [
-                    "testTemplateString"
-                ],
-                "condition": true,
-                "description": "Test String Condition",
-                "id": "testStringCondition",
-                "name": "Test String Condition",
-                "template": {
-                    "dataType": "string"
-                }
-            },
             "contractType":{
                 "applyTo": [
                     "testTemplateString"
@@ -175,7 +368,31 @@ module.exports = {
                         }
                     ]
                 }
-            }
+            },
+            "testStringCondition":{
+                "applyTo": [
+                    "testTemplateString"
+                ],
+                "condition": true,
+                "description": "Test String Condition",
+                "id": "testStringCondition",
+                "name": "Test String Condition",
+                "template": {
+                    "dataType": "string"
+                }
+            },
+            "testNumberCondition": {
+                "applyTo": [
+                    "testTemplateString2"
+                ],
+                "template": {
+                    "dataType": "number"
+                },
+                "condition": true,
+                "description": "Test Number Condition",
+                "id": "testNumberCondition",
+                "name": "Test Number Condition"
+            },
         }
     }
 };
