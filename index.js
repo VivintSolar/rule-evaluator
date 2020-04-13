@@ -3,7 +3,7 @@ const initialize = require('./lib/initialize');
 const executeTemplateString = require('./lib/execute/executeTemplateString');
 const executeFormula = require('./lib/execute/executeFormula');
 
-//VERSION: 1.4.0
+//VERSION: 1.4.1
 
 class RuleEvaluator {
     constructor( parameters ) {
@@ -36,10 +36,12 @@ class RuleEvaluator {
     updateGlobalAttributes( updatesByAttrName ){
         return Object.assign({},
             ...Object.keys(updatesByAttrName).map( attrName => {
-                this[ attrName ] = Object.assign({},
-                    this[ attrName ],
-                    updatesByAttrName[ attrName ]
-                );
+                if( typeof updatesByAttrName[ attrName ] === 'object' && !Array.isArray(updatesByAttrName[ attrName ]) ){
+                    this[ attrName ] = Object.assign({},
+                        this[ attrName ],
+                        updatesByAttrName[ attrName ]
+                    );
+                } else this[ attrName ] = updatesByAttrName[ attrName ];
                 return {
                     [ attrName ]: this[ attrName ]
                 }
