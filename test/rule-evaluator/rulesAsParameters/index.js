@@ -3,10 +3,10 @@ const assocObject = require('./associationObject');
 const assert = require('assert');
 const formulaAsTemplateStringParameterDefaults = require('./expected/formulaAsTemplateStringParameter-defaults');
 const formulaAsTemplateStringParameterConditions = require('./expected/formulaAsTemplateStringParameter-conditions');
-const outputJsonFile = require('../../utilities/outputJsonFile');
+const templateStringExpectedResults = require('./expected/templateStringExpectedResults');
 const path = require("path");
+const evaluateWithNumberByRange = require('../../utilities/evaluateWithNumberByRange');
 
-const outputPath = path.resolve('./output');
 
 // rulesAsParameters
 module.exports = () => {
@@ -26,11 +26,9 @@ module.exports = () => {
 
     const evaluated1 = ruleEvaluator.evaluate(ruleId, conditions);
 
-    outputJsonFile( outputPath, "testTemplateString - defaults", evaluated1, true);
-
-
     assert.equal( formulaAsTemplateStringParameterDefaults, JSON.stringify( evaluated1 ) );
     console.log('RE --- formulaAsTemplateStringParameter - defaults ---> Success!!!!!!!!!');
+
 
     ruleEvaluator.clearConditions();
     conditions.numberConditionForTestFormula = 4;
@@ -38,31 +36,20 @@ module.exports = () => {
 
     const evaluated2 = ruleEvaluator.evaluate(ruleId, conditions);
 
-
-    outputJsonFile( outputPath, "testTemplateString - with conditions", evaluated2 );
-
     assert.equal( formulaAsTemplateStringParameterConditions, JSON.stringify( evaluated2 ) );
     console.log('RE --- formulaAsTemplateStringParameter - targeted value w/ condition ---> Success!!!!!!!!!');
 
-    let results = {};
-    const addToResults = (identifier, item) => results[identifier] = item;
+
     const ruleId2 = "testTemplateString2";
+    const ruleId3 = "testTemplateStringNested";
 
-    const ruleEvaluator2 = new RuleEvaluator(assocObject);
-
-    addToResults( "Empty Conditions", ruleEvaluator2.evaluate( ruleId2 ) );
-    const executeWithTestNumberCondition = ( count ) => {
-        for( let i = 0; i < count; i++ ){
-            const conditions = { testNumberCondition: i };
-            const ruleEvaluator3 = new RuleEvaluator(assocObject);
-            addToResults( `With Condition = ${i}`, ruleEvaluator3.evaluate(ruleId2, conditions) )
-        }
+    const results = {
+        ...evaluateWithNumberByRange( ruleId2, "testNumberCondition", assocObject, [-1, 3]),
+        ...evaluateWithNumberByRange( ruleId3, "testNumberCondition2", assocObject, [-1, 3]),
+        ...evaluateWithNumberByRange( ruleId3, ["testNumberCondition2", "testNumberCondition"], assocObject, [-1, 3]),
     };
 
-    executeWithTestNumberCondition(4);
-
-    // console.log('results:::::',results);
-
-    outputJsonFile( outputPath, "testTemplateString2", results);
+    assert.equal( templateStringExpectedResults, JSON.stringify( results ) );
+    console.log('RE --- rules as template string parameters ---> Success!!!!!!!!!');
 
 };
