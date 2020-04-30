@@ -3,7 +3,7 @@ const initialize = require('./lib/initialize');
 const executeTemplateString = require('./lib/execute/executeTemplateString');
 const executeFormula = require('./lib/execute/executeFormula');
 
-//VERSION: 1.4.1
+//VERSION: 1.5.0
 
 class RuleEvaluator {
     constructor( parameters ) {
@@ -91,6 +91,9 @@ class RuleEvaluator {
                 [ ruleId ]: this.evaluate( ruleId, this.conditions )
             }))
         )
+    }
+    getAppliedRulesByView(viewId, returnFullRule){
+
     }
 }
 
