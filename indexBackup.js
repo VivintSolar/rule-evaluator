@@ -1,32 +1,37 @@
-const initializeAppliedRules = require('./initializeAppliedRules');
-// const initializeRules = require('./initializeRules');
-// const getGlobalAttributes = require("./getters/getGlobalAttributes");
-// const updateGlobalAttributes = require("./setters/updateGlobalAttributes");
-// const getDefinitions = require("./getters/getDefinitions");
-// const getRule = require("./getters/getRule");
+const execute = require('./lib/execute');
+const initialize = require('./lib/initialize');
+const executeTemplateString = require('./lib/execute/executeTemplateString');
+const executeFormula = require('./lib/execute/executeFormula');
 
-class AppliedRules {
-    constructor( parameters ){
+//VERSION: 1.5.0
+
+class RuleEvaluator {
+    constructor( parameters ) {
+        this.clearConditions = this.clearConditions.bind(this);
+        this.getRule = this.getRule.bind(this);
+        this.evaluate = this.evaluate.bind(this);
+        this.evaluateAll = this.evaluateAll.bind(this);
+        this.batchEvaluate = this.batchEvaluate.bind(this);
+        this.getUnsupportedStatements = this.getUnsupportedStatements.bind(this);
+        this.getAppliedStatement = this.getAppliedStatement.bind(this);
+        this.getPossibleStatements = this.getPossibleStatements.bind(this);
         this.getGlobalAttributes = this.getGlobalAttributes.bind(this);
         this.updateGlobalAttributes = this.updateGlobalAttributes.bind(this);
-        this.getDefinitions = this.getDefinitions.bind( this );
-        this.getRule = this.getRule.bind( this );
-        this.initializeAppliedRules( parameters );
+        this.initialize( parameters );
     }
+
     clearConditions(){
         this.conditions = null;
         return this.conditions;
     }
-    getDefinitions( definitionIds ){
-        return this.definitions.get( definitionIds );
-    }
-    getGlobalAttributes(attributeNames){
+    getGlobalAttributes( attributeNames ){
         if( typeof attributeNames === 'string' ) return this[ attributeNames ];
         if( Array.isArray( attributeNames ) ) return Object.assign({},
             ...attributeNames.map( attributeName => ({
                 [ attributeName ]: this.getGlobalAttributes( attributeName )
             }))
         );
+
     }
     updateGlobalAttributes( updatesByAttrName ){
         return Object.assign({},
@@ -87,16 +92,15 @@ class AppliedRules {
             }))
         )
     }
+    getAppliedRulesByView(viewId, returnFullRule){
 
-
+    }
 }
 
-AppliedRules.prototype.initializeAppliedRules = initializeAppliedRules;
-// AppliedRules.prototype.initializeRules = initializeRules;
-// AppliedRules.prototype.getGlobalAttributes = getGlobalAttributes;
-// AppliedRules.prototype.updateGlobalAttributes = updateGlobalAttributes;
-// AppliedRules.prototype.getDefinitions = getDefinitions;
-// AppliedRules.prototype.getRule = getRule;
+RuleEvaluator.prototype.initialize = initialize;
+RuleEvaluator.prototype.execute = execute;
+RuleEvaluator.prototype.executeTemplateString = executeTemplateString;
+RuleEvaluator.prototype.executeFormula = executeFormula;
 
-module.exports = AppliedRules;
 
+module.exports = RuleEvaluator;
