@@ -7,6 +7,9 @@ class ServiceElevation extends ConditionDefinition {
         super( definition );
         this.id = "serviceElevation";
         this.name = "Service Elevation";
-        this.name = "Service Elevation";
+        this.setDataType("number");
+        this.setOnConflict("standard");
     }
 }
+
+module.exports = ServiceElevation;
