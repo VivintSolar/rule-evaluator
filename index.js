@@ -3,7 +3,7 @@
 // const executeTemplateString = require('./lib/execute/executeTemplateString');
 // const executeFormula = require('./lib/execute/executeFormula');
 
-//VERSION: 1.5.0
+//VERSION: 1.5.0-beta
 
 // class RuleEvaluator {
 //     constructor( parameters ) {
