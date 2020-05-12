@@ -69,7 +69,6 @@ module.exports = () => {
 
 
     const results = [ result, result1 ];
-    console.log('results::',results);
 
     assert.equal( expected, JSON.stringify(results) );
     console.log('AppliedRulesSet --- evaluateSet ---> Success!!!!!!!!!');
