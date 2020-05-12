@@ -5,7 +5,7 @@ const associationObject = require('../associationObject');
 const expected = JSON.stringify({
     contractType: 'ppa',
     numberCondition: 80,
-    numberCondition1: 1200.0000384,
+    numberCondition1: 1200,
     booleanCondition: true
 });
 
@@ -15,7 +15,7 @@ module.exports = () => {
     const conditionValues = {
         contractType: "ppa",
         numberCondition: 80,
-        numberCondition1: 365.76,
+        numberCondition1: 365.7599882956804,
         booleanCondition: true
     };
 

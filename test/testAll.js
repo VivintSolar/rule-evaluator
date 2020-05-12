@@ -20,6 +20,11 @@ const templateStringAppliedConditions = require('./rule/templateString/appliedCo
 const templateStringUnion = require('./rule/templateString/union/index');
 const rulesAsParameters = require('./rule-evaluator/rulesAsParameters/index');
 
+const getAppliedConditions = require("./AppliedRules/getAppliedConditions/index");
+const evaluateSet = require("./AppliedRules/AppliedRulesSet/evaluateSet/index");
+const defineSet = require("./AppliedRules/AppliedRulesSet/defineSet/index");
+const defineSetByView = require("./AppliedRules/AppliedRulesSet/defineSetByView/index");
+const convertTo = require("./Definitions/convertTo/index");
 
 
 getAppliedStatementRE();
@@ -44,3 +49,9 @@ templateStringAppliedConditions();
 templateStringUnion();
 
 rulesAsParameters();
+
+defineSetByView();
+defineSet();
+evaluateSet();
+getAppliedConditions();
+convertTo();
