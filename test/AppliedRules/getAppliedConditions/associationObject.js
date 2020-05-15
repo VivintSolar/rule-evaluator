@@ -1,10 +1,10 @@
 const ServiceElevation = require('../../utilities/definitions/conditions/serviceElevation');
 const NumberCondition = require('../../utilities/definitions/conditions/numberCondition');
 const DWGAutomationNumberCondition = require('../../utilities/definitions/conditions/dwgAutomationNumberCondition');
-const NumberRule = require('../../utilities/definitions/rules/numberRule');
-const DWGAutomationTemplateStringRule = require('../../utilities/definitions/rules/dwgAutomationTemplateStringRule');
-const DWGAutomationNumberRule = require('../../utilities/definitions/rules/dwgAutomationNumberRule');
-const SnowLoad = require('../../utilities/definitions/rules/snowLoad');
+const NumberRule = require('../../utilities/definitions/rules/NumberRule');
+const DWGAutomationTemplateStringRule = require('../../utilities/definitions/rules/DWGAutomationTemplateStringRule');
+const DWGAutomationNumberRule = require('../../utilities/definitions/rules/DWGAutomationNumberRule');
+const SnowLoad = require('../../utilities/definitions/rules/SnowLoad');
 const Definitions = require('../../../lib/Definitions');
 
 const serviceElevation = new ServiceElevation({});

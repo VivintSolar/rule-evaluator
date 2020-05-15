@@ -1,5 +1,5 @@
 
-const TemplateStringRule = require('./templateStringRule');
+const TemplateStringRule = require('./TemplateStringRule');
 
 
 class DWGAutomationTemplateStringRule extends TemplateStringRule {

@@ -1,5 +1,5 @@
 
-const NumberRule = require('./numberRule');
+const NumberRule = require('./NumberRule');
 
 
 class DWGAutomationNumberRule extends NumberRule {
