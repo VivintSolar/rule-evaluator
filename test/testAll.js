@@ -20,11 +20,13 @@ const templateStringAppliedConditions = require('./AppliedRule/templateString/ap
 const templateStringUnion = require('./AppliedRule/templateString/union/index');
 const rulesAsParameters = require('./rule-evaluator/rulesAsParameters/index');
 
-const getAppliedConditions = require("./AppliedRules/getAppliedConditions/index");
+const getAppliedConditions = require("./AppliedRules/AppliedConditions/index");
 const evaluateSet = require("./AppliedRules/AppliedRulesSet/evaluateSet/index");
+const evaluateByTag = require("./AppliedRules/evaluateByTag");
 const defineSet = require("./AppliedRules/AppliedRulesSet/defineSet/index");
 const defineSetByView = require("./AppliedRules/AppliedRulesSet/defineSetByView/index");
 const convertTo = require("./Definitions/convertTo/index");
+
 const sortType = require("./AppliedRule/sortType/index");
 
 
@@ -53,6 +55,7 @@ rulesAsParameters();
 
 defineSetByView();
 defineSet();
+evaluateByTag();
 evaluateSet();
 getAppliedConditions();
 convertTo();

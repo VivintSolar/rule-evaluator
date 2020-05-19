@@ -11,6 +11,14 @@ const items = associationObjectFactory.definitionsFactory.generateArrayOfLength(
 
 const itemsShuffled = [...items].sort( _shuffle );
 
+const orderedListAlpha2Items = [
+    { id: "aItem1", name: "A Item 1" },
+    { id: "aItem2", name: "A Item 2" },
+    { id: "zItem3", name: "Z Item 3" },
+    { id: "bItem4", name: "B Item 4" },
+    { id: "aItem3", name: "A Item 3" }
+];
+
 
 const batch = [
     {
@@ -35,6 +43,17 @@ const batch = [
         }
     },
     {
+        id: "orderedListAlpha2",
+        name: "Ordered List Alpha2",
+        rule: true,
+        template:{
+            onConflict: "standard",
+            dataType: "ordered list",
+            sortType: "alphabetical",
+            items: orderedListAlpha2Items
+        }
+    },
+    {
         id: "orderedListPredefined",
         name: "Ordered List Predefined",
         rule: true,
@@ -50,7 +69,10 @@ const batch = [
 associationObjectFactory.initializeDefinitionsWithBatch(batch, true);
 
 const appliedBatch = batch.reduce( (result, { id }) => {
-    itemsShuffled.map( ({id:itemId}) => result.push({id, statement:{value: itemId}}));
+    const appliedItems = id === 'orderedListAlpha2' ? orderedListAlpha2Items : itemsShuffled;
+    appliedItems.map( ({ id:itemId }) => (
+        result.push({id, statement:{ value: itemId }})
+    ));
     return result
 }, []);
 

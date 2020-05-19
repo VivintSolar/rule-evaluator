@@ -1,8 +1,6 @@
-const RuleEvaluator = require('../../../../index');
-const assert = require('assert');
-const { associationObject } = require('../../AppliedConditions/data');
 
-const expected = JSON.stringify([
+
+module.exports = JSON.stringify([
     {
         dwgAutomationTemplateStringRule: {
             templateString: 'Template string value w/ {snowLoad}',
@@ -45,31 +43,3 @@ const expected = JSON.stringify([
         }
     }
 ]);
-
-
-module.exports = () => {
-
-    const viewId = "dwgAutomation";
-
-
-    const ruleEvaluator = new RuleEvaluator( associationObject );
-
-    ruleEvaluator.defineSetByView( viewId );
-
-    const result = ruleEvaluator.evaluateSet();
-
-    const ruleEvaluator1 = new RuleEvaluator( associationObject );
-
-    const conditions1 = {
-        dwgAutomationNumberCondition: 1,
-        serviceElevation: 2500
-    };
-    ruleEvaluator1.defineSetByView( viewId );
-    const result1 = ruleEvaluator1.evaluateSet( conditions1 );
-
-
-    const results = [ result, result1 ];
-
-    assert.equal( expected, JSON.stringify(results) );
-    console.log('AppliedRulesSet --- evaluateSet ---> Success!!!!!!!!!');
-};

@@ -1,6 +1,6 @@
 const RuleEvaluator = require('../../../../index');
 const assert = require('assert');
-const associationObject = require('../../getAppliedConditions/associationObject');
+const { associationObject } = require('../../AppliedConditions/data');
 
 const expected = JSON.stringify({
     ruleIds: [ 'dwgAutomationTemplateStringRule', 'dwgAutomationNumberRule' ],
