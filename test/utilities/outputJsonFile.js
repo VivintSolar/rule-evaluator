@@ -18,6 +18,7 @@ const resetOutput = (path) =>{
 
 const outputJsonFile = ( path, filename, data, reset) => {
     if( reset ) resetOutput(path);
+    if( data ) data = JSON.parse(JSON.stringify(data));
     fs.writeFile(`${path}/${filename}.json`, JSON.stringify(data), function (err) {
         if (err) return console.log(err);
         console.log('saved-> ',filename);

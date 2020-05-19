@@ -137,6 +137,34 @@ module.exports = JSON.stringify({
         "errors": null,
         "id": "orderedListAlpha"
     },
+    "orderedListAlpha2": {
+        "exceptions": null,
+        "conditions": null,
+        "value": [
+            {
+                "id": "aItem1",
+                "name": "A Item 1"
+            },
+            {
+                "id": "aItem2",
+                "name": "A Item 2"
+            },
+            {
+                "id": "aItem3",
+                "name": "A Item 3"
+            },
+            {
+                "id": "bItem4",
+                "name": "B Item 4"
+            },
+            {
+                "id": "zItem3",
+                "name": "Z Item 3"
+            }
+        ],
+        "errors": null,
+        "id": "orderedListAlpha2"
+    },
     "orderedListPredefined": {
         "exceptions": null,
         "conditions": null,
