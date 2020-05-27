@@ -28,6 +28,7 @@ const defineSetByView = require("./AppliedRules/AppliedRulesSet/defineSetByView/
 const convertTo = require("./Definitions/convertTo/index");
 
 const sortType = require("./AppliedRule/sortType/index");
+const GeneralStructural = require("./AppliedRules/TemplateStrings/GeneralStructural/index");
 
 
 getAppliedStatementRE();
@@ -61,3 +62,5 @@ getAppliedConditions();
 convertTo();
 
 sortType();
+
+GeneralStructural();
