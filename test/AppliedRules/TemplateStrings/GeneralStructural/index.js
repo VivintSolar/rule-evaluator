@@ -1,9 +1,6 @@
 const RuleEvaluator = require('../../../../index');
-// const expected = require('./expected-results');
 const assert = require('assert');
 const associationObject = require('./associationObject');
-
-const output = require("../../../utilities/outputJsonFile");
 
 const expectedEmptySnowLoadTest = JSON.stringify({
     "ruleId": "generalStructural",
