@@ -1,5 +1,5 @@
-const RuleDefinition = require('../../../lib/RuleDefinition');
-const ConditionDefinition = require('../../../lib/ConditionDefinition');
+const RuleDefinition = require('../../../lib/Definitions/RuleDefinition');
+const ConditionDefinition = require('../../../lib/Definitions/ConditionDefinition');
 
 const definitionFactory = {
     generateDefinition: (definitionAttributes) => {

@@ -1,5 +1,5 @@
 
-const ConditionDefinition = require('../../../../lib/ConditionDefinition');
+const ConditionDefinition = require('../../../../lib/Definitions/ConditionDefinition');
 
 
 class ContractType extends ConditionDefinition {

@@ -1,5 +1,5 @@
 
-const RuleDefinition = require('../../../../lib/RuleDefinition');
+const RuleDefinition = require('../../../../lib/Definitions/RuleDefinition');
 
 
 class NumberRule extends RuleDefinition {
