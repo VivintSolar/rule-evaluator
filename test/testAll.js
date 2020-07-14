@@ -30,6 +30,8 @@ const convertTo = require("./Definitions/convertTo/index");
 const sortType = require("./AppliedRule/sortType/index");
 const GeneralStructural = require("./AppliedRules/TemplateStrings/GeneralStructural/index");
 
+const FamilyTree = require("./FamilyTree/index");
+
 
 getAppliedStatementRE();
 getPossibleStatementsRE();
@@ -61,6 +63,7 @@ evaluateSet();
 getAppliedConditions();
 convertTo();
 
-sortType();
-
+// sortType();
 GeneralStructural();
+
+FamilyTree();

@@ -291,7 +291,20 @@ const cityDocuments = [
         "state": "New York",
         "longitude": -74.21542389999999
     },
-    {"city":"Olive","office":"NY-04 Albany","county":"Ulster County","rules":{},"longitude":-74.24140919999999,"searchNames":["Olive"],"id":"b743593b-d368-c1a4-d96c-44d0c226e44a","latitude":41.9456873,"name":"Olive","formattedAddress":"New Paltz, NY 12561, USA","state":"New York","type":"City"}
+    {
+        "city": "Olive",
+        "office": "NY-04 Albany",
+        "county": "Ulster County",
+        "rules": {},
+        "longitude": -74.24140919999999,
+        "searchNames": ["Olive"],
+        "id": "b743593b-d368-c1a4-d96c-44d0c226e44a",
+        "latitude": 41.9456873,
+        "name": "Olive",
+        "formattedAddress": "New Paltz, NY 12561, USA",
+        "state": "New York",
+        "type": "City"
+    }
 ];
 
 const countyDocuments = [
@@ -372,6 +385,29 @@ const countyDocuments = [
 const rocDocuments = [
     {
         "searchNames": [
+            "NY-03 Test Solar"
+        ],
+        "city": "Testing",
+        "inherit": [
+            {
+                "source": {
+                    "name": "NY-01 Long Island West Solar",
+                    "id": "bc990f10-0a01-46fe-a0e1-25de99ed6601",
+                    "type": "ROC"
+                }
+            }
+        ],
+        "latitude": "40.783864",
+        "county": "Testing County",
+        "name": "NY-03 Test Solar",
+        "rules": {},
+        "id": "8bc429af-4ba3-41dd-a1f0-8fbbe4cf3305",
+        "state": "New York",
+        "type": "ROC",
+        "longitude": "-73.120306"
+    },
+    {
+        "searchNames": [
             "NY-02 Long Island East Solar"
         ],
         "city": "Bohemia",
@@ -393,7 +429,50 @@ const rocDocuments = [
         "type": "ROC",
         "longitude": "-73.120306"
     },
-    {"city":"Westbury","county":"Nassau County","rules":{"availableMountingSystems":{"statements":[{"value":["uniracSFM"]}],"id":"availableMountingSystems"},"generalElectrical":{"statements":[{"value":"1. ALL WIRING MUST BE PROPERLY SUPPORTED BY DEVICES OR MECHANICAL MEANS DESIGNED AND LISTED FOR SUCH USE.  FOR ROOF-MOUNTED SYSTEMS- WIRING MUST BE PERMANENTLY AND COMPLETELY HELD OFF OF THE ROOF SURFACE. \n2. ANY CODE VIOLATIONS EVIDENT IN THE INTERCONNECTION PANEL WILL BE CORRECTED ON INSTALLATION. \n3. SYSTEM SHALL BE INSTALLED IN ACCORDANCE WITH ALL RELEVANT CODE\n4. RAPID SHUTDOWN INITIATION TAKES PLACE AT THE AC DISCONNECT.  RAPID SHUTDOWN COMMENCES UPON LOSS OF UTILITY SOURCE VOLTAGE. \n5. SEE *E 1.0 AND *E 2.0 FOR DIAGRAMS- CALCULATIONS- SCHEDULE AND SPECIFICATION"}],"id":"generalElectrical"},"otherDesignLinks":{"statements":[{"value":[{"name":"AHJ/Template Edits","template":"link","value":"https://vivintsolar.my.salesforce.com/00O1M0000077Jjy?cancelURL=%2F00O1M0000077Jjy"}]}],"id":"otherDesignLinks"},"otherFiles":{"name":"Other Files","statements":[{"value":["dataPage","engUniracBuildOfMaterial","engUniracEngineeringReport"]}],"id":"otherFiles","source":{"type":"ROC","name":"NY-01 Long Island West Solar","id":"bec754e9-0f19-42ff-a219-5bd6ee35ad75"}},"rocRequirements":{"name":"ROC Requirements","statements":[{"value":"Interconnection: Federal Pacific, Auto ESC! - (10.3.17)\nInterconnection: Split Bus Panels, Auto ESC! - (10.3.17)"}],"id":"rocRequirements"},"solarRoofJackAllowed":{"statements":[{"value":true}],"id":"solarRoofJackAllowed"},"systemSizeRestraintsDC":{"statements":[{"value":{"min":2}}],"id":"systemSizeRestraintsDC"}},"longitude":"-73.5517721","searchNames":["NY-01 Long Island West Solar"],"id":"bec754e9-0f19-42ff-a219-5bd6ee35ad75","latitude":"40.7696052","name":"NY-01 Long Island West Solar","state":"New York","type":"ROC"}
+    {
+        "city": "Westbury",
+        "county": "Nassau County",
+        "rules": {
+            "availableMountingSystems": {"statements": [{"value": ["uniracSFM"]}], "id": "availableMountingSystems"},
+            "generalElectrical": {
+                "statements": [{"value": "1. ALL WIRING MUST BE PROPERLY SUPPORTED BY DEVICES OR MECHANICAL MEANS DESIGNED AND LISTED FOR SUCH USE.  FOR ROOF-MOUNTED SYSTEMS- WIRING MUST BE PERMANENTLY AND COMPLETELY HELD OFF OF THE ROOF SURFACE. \n2. ANY CODE VIOLATIONS EVIDENT IN THE INTERCONNECTION PANEL WILL BE CORRECTED ON INSTALLATION. \n3. SYSTEM SHALL BE INSTALLED IN ACCORDANCE WITH ALL RELEVANT CODE\n4. RAPID SHUTDOWN INITIATION TAKES PLACE AT THE AC DISCONNECT.  RAPID SHUTDOWN COMMENCES UPON LOSS OF UTILITY SOURCE VOLTAGE. \n5. SEE *E 1.0 AND *E 2.0 FOR DIAGRAMS- CALCULATIONS- SCHEDULE AND SPECIFICATION"}],
+                "id": "generalElectrical"
+            },
+            "otherDesignLinks": {
+                "statements": [{
+                    "value": [{
+                        "name": "AHJ/Template Edits",
+                        "template": "link",
+                        "value": "https://vivintsolar.my.salesforce.com/00O1M0000077Jjy?cancelURL=%2F00O1M0000077Jjy"
+                    }]
+                }], "id": "otherDesignLinks"
+            },
+            "otherFiles": {
+                "name": "Other Files",
+                "statements": [{"value": ["dataPage", "engUniracBuildOfMaterial", "engUniracEngineeringReport"]}],
+                "id": "otherFiles",
+                "source": {
+                    "type": "ROC",
+                    "name": "NY-01 Long Island West Solar",
+                    "id": "bec754e9-0f19-42ff-a219-5bd6ee35ad75"
+                }
+            },
+            "rocRequirements": {
+                "name": "ROC Requirements",
+                "statements": [{"value": "Interconnection: Federal Pacific, Auto ESC! - (10.3.17)\nInterconnection: Split Bus Panels, Auto ESC! - (10.3.17)"}],
+                "id": "rocRequirements"
+            },
+            "solarRoofJackAllowed": {"statements": [{"value": true}], "id": "solarRoofJackAllowed"},
+            "systemSizeRestraintsDC": {"statements": [{"value": {"min": 2}}], "id": "systemSizeRestraintsDC"}
+        },
+        "longitude": "-73.5517721",
+        "searchNames": ["NY-01 Long Island West Solar"],
+        "id": "bec754e9-0f19-42ff-a219-5bd6ee35ad75",
+        "latitude": "40.7696052",
+        "name": "NY-01 Long Island West Solar",
+        "state": "New York",
+        "type": "ROC"
+    }
 ];
 
 const stateDocuments = [
