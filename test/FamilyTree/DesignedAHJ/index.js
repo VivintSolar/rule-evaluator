@@ -1,7 +1,8 @@
 const AssociationTree = require('../../../lib/Association/AssociationTree');
 const RuleEvaluator = require('../../../lib/RuleEvaluator');
 const { generateAssociationObject, service4780507 } = require('../AssociationData');
-const expectedDesignedAhj = 'b743593b-d368-c1a4-d96c-44d0c226e44a';
+const expectedDesignedAhj1 = 'b743593b-d368-c1a4-d96c-44d0c226e44a';
+const expectedDesignedAhj2 = '193a4aa7-4299-4755-964d-ff27f1df3b75';
 
 
 const assert = require('assert');
@@ -10,15 +11,15 @@ const assert = require('assert');
 module.exports = () => {
     const associationObject = generateAssociationObject();
     const associationTree = new AssociationTree( associationObject );
-    const designedAhj = associationTree.getDesignedAHJ( associationObject );
-    assert.equal( designedAhj, expectedDesignedAhj );
+    const designedAHJ1 = associationTree.getDesignedAHJ( associationObject );
+    assert.equal( designedAHJ1, expectedDesignedAhj1 );
     console.log(`DesignedAhj -- AssociationTree ---> Success!!!!!!!!!`);
 
     const ruleEvaluator = new RuleEvaluator( service4780507 );
-    const designedAHJ = ruleEvaluator.getDesignedAhj();
+    const designedAHJ2 = ruleEvaluator.getDesignedAHJ();
 
-
-    console.log('designedAHJ --->: ', designedAHJ)
+    assert.equal( designedAHJ2, expectedDesignedAhj2 );
+    console.log(`DesignedAhj -- RuleEvaluator ---> Success!!!!!!!!!`);
 
 
 };
