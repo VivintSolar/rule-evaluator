@@ -65,7 +65,7 @@ evaluateSet();
 getAppliedConditions();
 convertTo();
 
-// sortType();
+sortType();
 GeneralStructural();
 
 AssociationTree();
