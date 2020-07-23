@@ -32,6 +32,7 @@ const GeneralStructural = require("./AppliedRules/TemplateStrings/GeneralStructu
 
 const AssociationTree = require("./FamilyTree/AssociationTree");
 const DesignedAHJ = require("./FamilyTree/DesignedAHJ");
+const LegacyAhjRefs = require("./FamilyTree/LegacyAhjRefs");
 
 
 getAppliedStatementRE();
@@ -69,3 +70,4 @@ GeneralStructural();
 
 AssociationTree();
 DesignedAHJ();
+LegacyAhjRefs();

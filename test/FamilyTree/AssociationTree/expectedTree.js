@@ -30,7 +30,7 @@ module.exports = JSON.stringify(
                 }
             }],
             "children": ["81688718-aead-8b1a-12cf-44af4dda6da3", "937bf3e4-42c1-52d2-39a8-6e0d7adbb11f", "83705565-65b1-28c0-2cc8-b841fb126510", "a824717b-a970-8431-13fa-e722a4680988"],
-            "descendents": ["81688718-aead-8b1a-12cf-44af4dda6da3", "937bf3e4-42c1-52d2-39a8-6e0d7adbb11f", "83705565-65b1-28c0-2cc8-b841fb126510", "a824717b-a970-8431-13fa-e722a4680988"]
+            "descendants": ["81688718-aead-8b1a-12cf-44af4dda6da3", "937bf3e4-42c1-52d2-39a8-6e0d7adbb11f", "83705565-65b1-28c0-2cc8-b841fb126510", "a824717b-a970-8431-13fa-e722a4680988"]
         },
         "81688718-aead-8b1a-12cf-44af4dda6da3": {
             "id": "81688718-aead-8b1a-12cf-44af4dda6da3",
@@ -66,7 +66,7 @@ module.exports = JSON.stringify(
             "type": "City",
             "inherit": [{"source": {"name": "Olive", "id": "b743593b-d368-c1a4-d96c-44d0c226e44a", "type": "City"}}],
             "children": ["b743593b-d368-c1a4-d96c-44d0c226e44a"],
-            "descendents": ["b743593b-d368-c1a4-d96c-44d0c226e44a"]
+            "descendants": ["b743593b-d368-c1a4-d96c-44d0c226e44a"]
         },
         "b743593b-d368-c1a4-d96c-44d0c226e44a": {
             "id": "b743593b-d368-c1a4-d96c-44d0c226e44a",
@@ -99,7 +99,7 @@ module.exports = JSON.stringify(
                 }
             }],
             "children": ["8f3c5dd4-5494-c38c-611f-86bcfbc11a94", "2d887e17-7a22-f68f-95f9-a77b1cbf403e", "25b3068f-3ba1-a70e-8b85-c2cdfd496afd"],
-            "descendents": ["8f3c5dd4-5494-c38c-611f-86bcfbc11a94", "2d887e17-7a22-f68f-95f9-a77b1cbf403e", "25b3068f-3ba1-a70e-8b85-c2cdfd496afd"]
+            "descendants": ["8f3c5dd4-5494-c38c-611f-86bcfbc11a94", "2d887e17-7a22-f68f-95f9-a77b1cbf403e", "25b3068f-3ba1-a70e-8b85-c2cdfd496afd"]
         },
         "8f3c5dd4-5494-c38c-611f-86bcfbc11a94": {
             "id": "8f3c5dd4-5494-c38c-611f-86bcfbc11a94",
@@ -134,7 +134,7 @@ module.exports = JSON.stringify(
                 }
             }],
             "children": ["bc990f10-0a01-46fe-a0e1-25de99ed6601"],
-            "descendents": ["bc990f10-0a01-46fe-a0e1-25de99ed6601", "bec754e9-0f19-42ff-a219-5bd6ee35ad75"]
+            "descendants": ["bc990f10-0a01-46fe-a0e1-25de99ed6601", "bec754e9-0f19-42ff-a219-5bd6ee35ad75"]
         },
         "bc990f10-0a01-46fe-a0e1-25de99ed6601": {
             "id": "bc990f10-0a01-46fe-a0e1-25de99ed6601",
@@ -149,7 +149,7 @@ module.exports = JSON.stringify(
             }],
             "parents": ["8bc429af-4ba3-41dd-a1f0-8fbbe4cf3305"],
             "children": ["bec754e9-0f19-42ff-a219-5bd6ee35ad75"],
-            "descendents": ["bec754e9-0f19-42ff-a219-5bd6ee35ad75"],
+            "descendants": ["bec754e9-0f19-42ff-a219-5bd6ee35ad75"],
             "ancestors": ["8bc429af-4ba3-41dd-a1f0-8fbbe4cf3305"]
         },
         "bec754e9-0f19-42ff-a219-5bd6ee35ad75": {
@@ -189,7 +189,7 @@ module.exports = JSON.stringify(
                 }
             }],
             "children": ["a7979450-83fc-84b2-2e3f-afa0fc6a02d6", "a507ee46-4486-e12d-5fac-86267f336084", "a824717b-a970-8431-13fa-e722a4680988", "61424e3b-cbdb-c90f-2cc3-1b8f2324cedd"],
-            "descendents": ["a7979450-83fc-84b2-2e3f-afa0fc6a02d6", "a507ee46-4486-e12d-5fac-86267f336084", "a824717b-a970-8431-13fa-e722a4680988", "61424e3b-cbdb-c90f-2cc3-1b8f2324cedd"]
+            "descendants": ["a7979450-83fc-84b2-2e3f-afa0fc6a02d6", "a507ee46-4486-e12d-5fac-86267f336084", "a824717b-a970-8431-13fa-e722a4680988", "61424e3b-cbdb-c90f-2cc3-1b8f2324cedd"]
         },
         "a7979450-83fc-84b2-2e3f-afa0fc6a02d6": {
             "id": "a7979450-83fc-84b2-2e3f-afa0fc6a02d6",
@@ -218,7 +218,7 @@ module.exports = JSON.stringify(
             "type": "Utility",
             "inherit": [{"source": {"name": "PGE", "id": "4eb622c2-584b-483e-a731-143131420b12", "type": "Utility"}}],
             "children": ["4eb622c2-584b-483e-a731-143131420b12"],
-            "descendents": ["4eb622c2-584b-483e-a731-143131420b12"]
+            "descendants": ["4eb622c2-584b-483e-a731-143131420b12"]
         },
         "4eb622c2-584b-483e-a731-143131420b12": {
             "id": "4eb622c2-584b-483e-a731-143131420b12",

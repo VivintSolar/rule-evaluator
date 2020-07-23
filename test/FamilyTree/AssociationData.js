@@ -241,7 +241,7 @@ const service4780507 = {
 }
 const index = {
     associationTreeElements: elementOptions[0],
-    generateAssociationObject: ( option ) => ({
+    generateAhj: ( option ) => ({
         elements: elementOptions[ option || 0 ],
         place: 'incorporatedPlace'
     }),
