@@ -30,6 +30,10 @@ const convertTo = require("./Definitions/convertTo/index");
 const sortType = require("./AppliedRule/sortType/index");
 const GeneralStructural = require("./AppliedRules/TemplateStrings/GeneralStructural/index");
 
+const AssociationTree = require("./FamilyTree/AssociationTree");
+const DesignedAHJ = require("./FamilyTree/DesignedAHJ");
+const LegacyAhjRefs = require("./FamilyTree/LegacyAhjRefs");
+
 
 getAppliedStatementRE();
 getPossibleStatementsRE();
@@ -62,5 +66,8 @@ getAppliedConditions();
 convertTo();
 
 sortType();
-
 GeneralStructural();
+
+AssociationTree();
+DesignedAHJ();
+LegacyAhjRefs();
