@@ -3,10 +3,10 @@ const assert = require('assert');
 const associationObject = require('../associationObject');
 
 const expected = JSON.stringify({
-    contractType: 'ppa',
+    contractType: 'PPA',
     numberCondition: 80,
     numberCondition1: 1200,
-    booleanCondition: true
+    booleanCondition: 'Yes'
 });
 
 
@@ -27,8 +27,6 @@ module.exports = () => {
             [ key ]: ruleEvaluator.convertToDisplayValue( key, conditionValues[key] )
         }))
     );
-
-
 
     assert.equal( expected, JSON.stringify(convertedConditionValues) );
     console.log('Definitions --- convertToDisplayValue ---> Success!!!!!!!!!');

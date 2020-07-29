@@ -34,6 +34,8 @@ const AssociationTree = require("./FamilyTree/AssociationTree");
 const DesignedAHJ = require("./FamilyTree/DesignedAHJ");
 const LegacyAhjRefs = require("./FamilyTree/LegacyAhjRefs");
 
+const allTestMeasurementsConverter = require("./MeasurementsConverter/allTest");
+
 
 getAppliedStatementRE();
 getPossibleStatementsRE();
@@ -71,3 +73,5 @@ GeneralStructural();
 AssociationTree();
 DesignedAHJ();
 LegacyAhjRefs();
+
+allTestMeasurementsConverter();
