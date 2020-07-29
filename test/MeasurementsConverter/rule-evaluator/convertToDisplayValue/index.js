@@ -5,7 +5,9 @@ const {
             defPointSetbacks: defPointSetbackExpected
         }
     },
-    associationObject
+    associationObjects:{
+        defaultDocument: defaultDocumentAssociationObject
+    }
 } = require('../../data');
 const RuleEvaluator = require('../../../../lib');
 const assert = require('assert');
@@ -13,10 +15,9 @@ const assert = require('assert');
 
 
 module.exports = () => {
-    const ruleEvaluator = new RuleEvaluator(associationObject);
+    const ruleEvaluator = new RuleEvaluator(defaultDocumentAssociationObject);
     const evaluated = ruleEvaluator.evaluate( "defPointSetbacks" );
-    const converted = ruleEvaluator.convertToDisplayValue( "defPointSetbacks", evaluated.value )
 
-    assert.equal( JSON.stringify(converted), defPointSetbackExpected[0] );
+    assert.equal( JSON.stringify(evaluated.value), defPointSetbackExpected[0] );
     console.log(`RuleEvaluator -- Measurements --- convertToDisplayValue ---> Success!!!!!!!!!`);
 };

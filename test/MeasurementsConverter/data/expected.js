@@ -17,7 +17,43 @@ const convertToDisplayValue = {
             ridge: 18,
             inflection: 314.9608
         })
-    ]
+    ],
+    evaluateAllTypes: JSON.stringify({
+        "convertAll": {
+            "orderedListRule": [
+                {"id": "listItem1", "name": "List Item #1"},
+                {"id": "listItem3", "name": "List Item #3"},
+                {"id": "listItem5", "name": "List Item #5"}
+            ],
+            "objectOfSupportedTypesRule": {
+                "numberAttributeUnits": 6,
+                "numberAttributeDisplayAsUnits": 236.2206,
+                "booleanBasic": true,
+                "booleanDisplayAs": "Yes",
+                "enumBasic": "Option #2",
+                "dateBasic": "July 29, 2020"
+            },
+            "basicBooleanRule": true,
+            "customDisplayBooleanRule": "YES"
+        },
+        "default": {
+            "orderedListRule": [
+                {"id": "listItem1", "name": "List Item #1"},
+                {"id": "listItem3", "name": "List Item #3"},
+                {"id": "listItem5", "name": "List Item #5"}
+            ],
+            "objectOfSupportedTypesRule": {
+                "numberAttributeUnits": 6,
+                "numberAttributeDisplayAsUnits": 236.2206,
+                "booleanBasic": true,
+                "booleanDisplayAs": true,
+                "enumBasic": "Option #2",
+                "dateBasic": "2020-07-29T19:58:47.456Z"
+            },
+            "basicBooleanRule": true,
+            "customDisplayBooleanRule": true
+        }
+    })
 };
 
 const deconstruct = {
