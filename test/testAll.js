@@ -16,6 +16,8 @@ const formulaParenthesis = require('./AppliedRule/formula/formulaParenthesis/ind
 const formulaParameterSubsets = require('./AppliedRule/formula/parameterSubsets/index');
 const formulaOrderOfOperations = require('./AppliedRule/formula/orderOfOperations/index');
 
+const filterAllowableBatteries = require('./AppliedRule/filter/index');
+
 const templateStringAppliedConditions = require('./AppliedRule/templateString/appliedConditions/index');
 const templateStringUnion = require('./AppliedRule/templateString/union/index');
 const rulesAsParameters = require('./rule-evaluator/rulesAsParameters/index');
@@ -54,6 +56,8 @@ formulaAppliedConditions();
 formulaParenthesis();
 formulaParameterSubsets();
 formulaOrderOfOperations();
+
+filterAllowableBatteries();
 
 templateStringAppliedConditions();
 templateStringUnion();
