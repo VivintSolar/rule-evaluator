@@ -1,4 +1,4 @@
-const Evaluator = require('../../../index');
+const Evaluator = require('../../../../index');
 const expectedAllUnique = require('./expected-all-unique-results');
 const expectedContractTypePPA = require('./expected-contract-type-results');
 const assert = require('assert');
