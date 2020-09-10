@@ -9,7 +9,7 @@ module.exports = () => {
 
     const ruleId = 'allowableInverters';
 
-    const conditions = { leadSource: "homebuilder" }
+    const conditions = { contractType: "ppa" }
 
     const evaluatedContractTypePPA = ruleEvaluator.evaluate( ruleId, conditions );
 

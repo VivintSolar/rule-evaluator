@@ -214,7 +214,7 @@ module.exports = {
                         ],
                         "onConflict": "filter",
                         "value": {
-                            "_type": "contain",
+                            "_type": "doesntContain",
                             "ITC_CODE": [
                                 "30",
                                 "26"
@@ -231,7 +231,7 @@ module.exports = {
                         ],
                         "onConflict": "filter",
                         "value": {
-                            "_type": "contain",
+                            "_type": "doesntContain",
                             "ITC_CODE": [
                                 "30",
                                 "26"
@@ -248,7 +248,7 @@ module.exports = {
                         ],
                         "onConflict": "filter",
                         "value": {
-                            "_type": "contain",
+                            "_type": "doesntContain",
                             "ITC_CODE": [
                                 "30",
                                 "26"
