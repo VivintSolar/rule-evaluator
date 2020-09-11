@@ -1,15 +1,15 @@
-const Evaluator = require('../../../../index');
+const Evaluator = require('../../../../../index');
 const expectedContractTypePPA = require('./expected-contract-type-ppa-results');
 const assert = require('assert');
-const assocObj = require('./associationObject');
+const assocObj = require('../associationObject');
 
 
 module.exports = () => {
     const ruleEvaluator = new Evaluator( assocObj );
 
-    const ruleId = 'allowableInverters';
+    const ruleId = 'allowableModules';
 
-    const conditions = { contractType: "ppa" }
+    const conditions = { contractType: "ppa", isSpecialPurchaseSafeHarbor: true }
 
     const evaluatedContractTypePPA = ruleEvaluator.evaluate( ruleId, conditions );
 
