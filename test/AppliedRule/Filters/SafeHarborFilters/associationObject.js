@@ -7,67 +7,51 @@ const getIdName = ({ MANUFACTURER_NAME, MANUFACTURER_PART_NUM, ITEM_NUMBER }) =>
 const getItems = itemType => {
     return [
         {
-            "ITEM_NUMBER": "V303645",
-            "MANUFACTURER_PART_NUM": "SE10000H-US000BNC4",
-            "MANUFACTURER_NAME": "SolarEdge Technologies",
             LEAD_SOURCE: "MPH",
             ITC_CODE: "30"
         },
         {
-            "ITEM_NUMBER": "V304116",
-            "MANUFACTURER_PART_NUM": "SE7600A-USS2RNCY2",
-            "MANUFACTURER_NAME": "SolarEdge Technologies",
+            LEAD_SOURCE: "Dealer",
+            ITC_CODE: "22"
+        },
+        {
             LEAD_SOURCE: "Homebuilder",
             ITC_CODE: "26"
         },
         {
-            "ITEM_NUMBER": "V303644",
-            "MANUFACTURER_PART_NUM": "SE3800H-US000BNC4",
-            "MANUFACTURER_NAME": "SolarEdge Technologies",
             LEAD_SOURCE: "MPH",
-            ITC_CODE: "30"
+            ITC_CODE: "26"
         },
         {
-            "ITEM_NUMBER": "V303643",
-            "MANUFACTURER_PART_NUM": "SE7600H-US000BNC4",
-            "MANUFACTURER_NAME": "SolarEdge Technologies",
-            LEAD_SOURCE: "Homebuilder"
+            LEAD_SOURCE: "Homebuilder",
+            ITC_CODE: "22"
         },
         {
-            "ITEM_NUMBER": "V304116",
-            "MANUFACTURER_PART_NUM": "SE7600A-USS2RNCY2",
-            "MANUFACTURER_NAME": "SolarEdge Technologies",
             LEAD_SOURCE: "Homebuilder",
             ITC_CODE: "30"
         },
         {
-            "ITEM_NUMBER": "V303644",
-            "MANUFACTURER_PART_NUM": "SE3800H-US000BNC4",
-            "MANUFACTURER_NAME": "SolarEdge Technologies",
-            LEAD_SOURCE: "Retail",
-            ITC_CODE: "30"
+            LEAD_SOURCE: "MPH",
+            ITC_CODE: "22"
         },
         {
-            "ITEM_NUMBER": "V303645",
-            "MANUFACTURER_PART_NUM": "SE10000H-US000BNC4",
-            "MANUFACTURER_NAME": "SolarEdge Technologies",
-            LEAD_SOURCE: "Retail"
+            LEAD_SOURCE: "Web",
+            ITC_CODE: "26"
         },
         {
-            "ITEM_NUMBER": "V303643",
-            "MANUFACTURER_PART_NUM": "SE7600H-US000BNC4",
-            "MANUFACTURER_NAME": "SolarEdge Technologies",
             LEAD_SOURCE: "Homebuilder",
             ITC_CODE: "30"
         },
         {
-            "ITEM_NUMBER": "V304116",
-            "MANUFACTURER_PART_NUM": "SE7600A-USS2RNCY2",
-            "MANUFACTURER_NAME": "SolarEdge Technologies",
             LEAD_SOURCE: "Retail",
             ITC_CODE: "30"
         }
-    ].map( (item,index) => ({ ...item, id: `${itemType}${index}`, name: `${itemType} #${index}` }));
+    ].map( (item,index) => ({
+        ...item,
+        id: `${itemType}${ index + 1 }`,
+        description: `LEAD_SOURCE: ${ item.LEAD_SOURCE }, ITC_CODE: ${ item.ITC_CODE }`,
+        name: `${itemType} #${ index + 1 }`
+    }));
 }
 
 module.exports = {
@@ -118,7 +102,7 @@ module.exports = {
                         ],
                         "onConflict": "filter",
                         "value": {
-                            "_type": "doestContain",
+                            "_type": "doesntContain",
                             "LEAD_SOURCE": [
                                 "Homebuilder",
                                 "MPH"

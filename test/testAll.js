@@ -17,6 +17,7 @@ const formulaParameterSubsets = require('./AppliedRule/formula/parameterSubsets/
 const formulaOrderOfOperations = require('./AppliedRule/formula/orderOfOperations/index');
 
 const filterAllowableBatteries = require('./AppliedRule/Filters/filter/index');
+const SafeHarborFiltersTestAll = require('./AppliedRule/Filters/SafeHarborFilters/testAll');
 
 const templateStringAppliedConditions = require('./AppliedRule/templateString/appliedConditions/index');
 const templateStringUnion = require('./AppliedRule/templateString/union/index');
@@ -58,6 +59,7 @@ formulaParameterSubsets();
 formulaOrderOfOperations();
 
 filterAllowableBatteries();
+SafeHarborFiltersTestAll();
 
 templateStringAppliedConditions();
 templateStringUnion();
