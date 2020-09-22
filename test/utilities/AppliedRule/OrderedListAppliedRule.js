@@ -8,7 +8,6 @@ const defaultStatements = definition.getItems()
     .filter((item,index) => !(index % 2) )
     .reverse()
     .map(({ id:value }) => ({ value }) )
-console.log('defaultStatements:',defaultStatements)
 
 class OrderedListAppliedRule extends AppliedRule {
     constructor(appliedRuleData) {
