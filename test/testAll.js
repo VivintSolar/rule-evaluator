@@ -18,6 +18,7 @@ const formulaOrderOfOperations = require('./AppliedRule/formula/orderOfOperation
 
 const filterAllowableBatteries = require('./AppliedRule/Filters/filter/index');
 const SafeHarborFiltersTestAll = require('./AppliedRule/Filters/SafeHarborFilters/testAll');
+const SafeHarborContactRestrictions = require('./AppliedRule/Filters/SafeHarborContactRestrictions/index');
 
 const templateStringAppliedConditions = require('./AppliedRule/templateString/appliedConditions/index');
 const templateStringUnion = require('./AppliedRule/templateString/union/index');
@@ -60,6 +61,7 @@ formulaOrderOfOperations();
 
 filterAllowableBatteries();
 SafeHarborFiltersTestAll();
+SafeHarborContactRestrictions();
 
 templateStringAppliedConditions();
 templateStringUnion();

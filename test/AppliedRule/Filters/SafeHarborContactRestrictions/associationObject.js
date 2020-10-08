@@ -3,401 +3,162 @@
 const inverterItems = [
     {
         "id": "V303643",
-        "name": "SolarEdge Technologies SE7600H-US000BNC4",
-        "ITEM_NUMBER": "V303643",
-        "DESCRIPTION": "SE 7.6kW RGM HD - SE7600H-US000BNC4",
-        "UOM": "EA",
-        "ITEM_CLASS": "Inverters",
-        "CATEGORY": "Cash_Loan",
-        "CATALOG_NAME": "VS Design Catalog",
-        "DEALER": "Ben Reber",
-        "DEVELOPMENT_NAME": "Lindon Meadows",
+        "name": "V303643 - Direct - Cash - 26",
         "LEAD_SOURCE": "Direct",
         "CONTRACT_RESTRICTIONS": "Cash",
-        "ITEM_STATUS": "Consume",
-        "ORGANIZATION": "MA03",
-        "MANUFACTURER_PART_NUM": "SE7600H-US000BNC4",
-        "MANUFACTURER_NAME": "SolarEdge Technologies",
-        "IS_SERIALIZABLE": "FALSE",
-        "PRODUCT_TYPE": "Inverter",
-        "PRODUCT_CLASS": "",
         "ITC_CODE": "26"
     },
     {
         "id": "V303643",
-        "name": "SolarEdge Technologies SE7600H-US000BNC4",
-        "ITEM_NUMBER": "V303643",
-        "DESCRIPTION": "SE 7.6kW RGM HD - SE7600H-US000BNC4",
-        "UOM": "EA",
-        "ITEM_CLASS": "Inverters",
-        "CATEGORY": "Cash_Loan",
-        "CATALOG_NAME": "VS Design Catalog",
-        "DEALER": "Ben Reber",
-        "DEVELOPMENT_NAME": "Lindon Meadows",
+        "name": "V303643 - Direct - Loan - 26",
         "LEAD_SOURCE": "Direct",
         "CONTRACT_RESTRICTIONS": "Loan",
-        "ITEM_STATUS": "Consume",
-        "ORGANIZATION": "MA03",
-        "MANUFACTURER_PART_NUM": "SE7600H-US000BNC4",
-        "MANUFACTURER_NAME": "SolarEdge Technologies",
-        "IS_SERIALIZABLE": "FALSE",
-        "PRODUCT_TYPE": "Inverter",
-        "PRODUCT_CLASS": "",
         "ITC_CODE": "26"
     },
     {
         "id": "V304570",
-        "name": "SolarEdge Technologies SE6000HUS0SHBNC4",
-        "ITEM_NUMBER": "V304570",
-        "DESCRIPTION": "SE 6.0kW STOREDGE RGM HD +LTE MODEM - SE6000H-USSSHBC14",
-        "UOM": "EA",
-        "ITEM_CLASS": "Inverters",
-        "CATEGORY": "PPA_Lease",
-        "CATALOG_NAME": "VS Design Catalog",
-        "DEALER": "",
-        "DEVELOPMENT_NAME": "",
+        "name": "V304570 - Direct - PPA - 30",
         "LEAD_SOURCE": "Direct",
         "CONTRACT_RESTRICTIONS": "PPA",
-        "ITEM_STATUS": "Active",
-        "ORGANIZATION": "MA03",
-        "MANUFACTURER_PART_NUM": "SE6000HUS0SHBNC4",
-        "MANUFACTURER_NAME": "SolarEdge Technologies",
-        "IS_SERIALIZABLE": "TRUE",
-        "PRODUCT_TYPE": "Inverter",
-        "PRODUCT_CLASS": "",
         "ITC_CODE": "30"
     },
     {
         "id": "V304570",
-        "name": "SolarEdge Technologies SE6000HUS0SHBNC4",
-        "ITEM_NUMBER": "V304570",
-        "DESCRIPTION": "SE 6.0kW STOREDGE RGM HD +LTE MODEM - SE6000H-USSSHBC14",
-        "UOM": "EA",
-        "ITEM_CLASS": "Inverters",
-        "CATEGORY": "PPA_Lease",
-        "CATALOG_NAME": "VS Design Catalog",
-        "DEALER": "",
-        "DEVELOPMENT_NAME": "",
+        "name": "V304570 - Direct - Lease - 30",
         "LEAD_SOURCE": "Direct",
         "CONTRACT_RESTRICTIONS": "Lease",
-        "ITEM_STATUS": "Active",
-        "ORGANIZATION": "MA03",
-        "MANUFACTURER_PART_NUM": "SE6000HUS0SHBNC4",
-        "MANUFACTURER_NAME": "SolarEdge Technologies",
-        "IS_SERIALIZABLE": "TRUE",
-        "PRODUCT_TYPE": "Inverter",
-        "PRODUCT_CLASS": "",
         "ITC_CODE": "30"
     },
     {
         "id": "V304568",
-        "name": "SolarEdge Technologies SE7600HUS0SHBNC4",
-        "ITEM_NUMBER": "V304568",
-        "DESCRIPTION": "SE 7.6kW STOREDGE RGM HD +LTE MODEM - SE7600H-USSSHBC14",
-        "UOM": "EA",
-        "ITEM_CLASS": "Inverters",
-        "CATEGORY": "PPA_Lease",
-        "CATALOG_NAME": "VS Design Catalog",
-        "DEALER": "",
-        "DEVELOPMENT_NAME": "",
+        "name": "V304568 - Direct - PPA - 30",
         "LEAD_SOURCE": "Direct",
         "CONTRACT_RESTRICTIONS": "PPA",
-        "ITEM_STATUS": "Active",
-        "ORGANIZATION": "MA03",
-        "MANUFACTURER_PART_NUM": "SE7600HUS0SHBNC4",
-        "MANUFACTURER_NAME": "SolarEdge Technologies",
-        "IS_SERIALIZABLE": "TRUE",
-        "PRODUCT_TYPE": "Inverter",
-        "PRODUCT_CLASS": "",
         "ITC_CODE": "30"
     },
     {
         "id": "V304568",
-        "name": "SolarEdge Technologies SE7600HUS0SHBNC4",
-        "ITEM_NUMBER": "V304568",
-        "DESCRIPTION": "SE 7.6kW STOREDGE RGM HD +LTE MODEM - SE7600H-USSSHBC14",
-        "UOM": "EA",
-        "ITEM_CLASS": "Inverters",
-        "CATEGORY": "PPA_Lease",
-        "CATALOG_NAME": "VS Design Catalog",
-        "DEALER": "",
-        "DEVELOPMENT_NAME": "",
+        "name": "V304568 - Direct - Lease - 30",
         "LEAD_SOURCE": "Direct",
         "CONTRACT_RESTRICTIONS": "Lease",
-        "ITEM_STATUS": "Active",
-        "ORGANIZATION": "MA03",
-        "MANUFACTURER_PART_NUM": "SE7600HUS0SHBNC4",
-        "MANUFACTURER_NAME": "SolarEdge Technologies",
-        "IS_SERIALIZABLE": "TRUE",
-        "PRODUCT_TYPE": "Inverter",
-        "PRODUCT_CLASS": "",
         "ITC_CODE": "30"
     },
     {
         "id": "V304567",
-        "name": "SolarEdge Technologies SE3800HUS0SHBNC4",
-        "ITEM_NUMBER": "V304567",
-        "DESCRIPTION": "SE 3.8kW STOREDGE RGM HD +LTE MODEM - SE3800H-USSSHBC14",
-        "UOM": "EA",
-        "ITEM_CLASS": "Inverters",
-        "CATEGORY": "PPA_Lease",
-        "CATALOG_NAME": "VS Design Catalog",
-        "DEALER": "",
-        "DEVELOPMENT_NAME": "",
+        "name": "V304567 - Direct - PPA - 30",
         "LEAD_SOURCE": "Direct",
         "CONTRACT_RESTRICTIONS": "PPA",
-        "ITEM_STATUS": "Active",
-        "ORGANIZATION": "MA03",
-        "MANUFACTURER_PART_NUM": "SE3800HUS0SHBNC4",
-        "MANUFACTURER_NAME": "SolarEdge Technologies",
-        "IS_SERIALIZABLE": "TRUE",
-        "PRODUCT_TYPE": "Inverter",
-        "PRODUCT_CLASS": "",
         "ITC_CODE": "30"
     },
     {
         "id": "V304567",
-        "name": "SolarEdge Technologies SE3800HUS0SHBNC4",
-        "ITEM_NUMBER": "V304567",
-        "DESCRIPTION": "SE 3.8kW STOREDGE RGM HD +LTE MODEM - SE3800H-USSSHBC14",
-        "UOM": "EA",
-        "ITEM_CLASS": "Inverters",
-        "CATEGORY": "PPA_Lease",
-        "CATALOG_NAME": "VS Design Catalog",
-        "DEALER": "",
-        "DEVELOPMENT_NAME": "",
+        "name": "V304567 - Direct - Lease - 30",
         "LEAD_SOURCE": "Direct",
         "CONTRACT_RESTRICTIONS": "Lease",
-        "ITEM_STATUS": "Active",
-        "ORGANIZATION": "MA03",
-        "MANUFACTURER_PART_NUM": "SE3800HUS0SHBNC4",
-        "MANUFACTURER_NAME": "SolarEdge Technologies",
-        "IS_SERIALIZABLE": "TRUE",
-        "PRODUCT_TYPE": "Inverter",
-        "PRODUCT_CLASS": "",
         "ITC_CODE": "30"
     },
     {
         "id": "V303644",
-        "name": "SolarEdge Technologies SE3800H-US000BNC4",
-        "ITEM_NUMBER": "V303644",
-        "DESCRIPTION": "SE 3.8kW RGM - SE3800H-US000BNC4",
-        "UOM": "EA",
-        "ITEM_CLASS": "Inverters",
-        "CATEGORY": "Cash_Loan",
-        "CATALOG_NAME": "VS Design Catalog",
-        "DEALER": "Ben Reber",
-        "DEVELOPMENT_NAME": "Lindon Meadows",
+        "name": "V303644 - Direct - Cash - 26",
         "LEAD_SOURCE": "Direct",
         "CONTRACT_RESTRICTIONS": "Cash",
-        "ITEM_STATUS": "Active",
-        "ORGANIZATION": "MA03",
-        "MANUFACTURER_PART_NUM": "SE3800H-US000BNC4",
-        "MANUFACTURER_NAME": "SolarEdge Technologies",
-        "IS_SERIALIZABLE": "FALSE",
-        "PRODUCT_TYPE": "Inverter",
-        "PRODUCT_CLASS": "",
         "ITC_CODE": "26"
     },
     {
         "id": "V303644",
-        "name": "SolarEdge Technologies SE3800H-US000BNC4",
-        "ITEM_NUMBER": "V303644",
-        "DESCRIPTION": "SE 3.8kW RGM - SE3800H-US000BNC4",
-        "UOM": "EA",
-        "ITEM_CLASS": "Inverters",
-        "CATEGORY": "Cash_Loan",
-        "CATALOG_NAME": "VS Design Catalog",
-        "DEALER": "Ben Reber",
-        "DEVELOPMENT_NAME": "Lindon Meadows",
+        "name": "V303644 - Direct - Loan - 26",
         "LEAD_SOURCE": "Direct",
         "CONTRACT_RESTRICTIONS": "Loan",
-        "ITEM_STATUS": "Active",
-        "ORGANIZATION": "MA03",
-        "MANUFACTURER_PART_NUM": "SE3800H-US000BNC4",
-        "MANUFACTURER_NAME": "SolarEdge Technologies",
-        "IS_SERIALIZABLE": "FALSE",
-        "PRODUCT_TYPE": "Inverter",
-        "PRODUCT_CLASS": "",
         "ITC_CODE": "26"
     },
     {
         "id": "V303645",
-        "name": "SolarEdge Technologies SE10000H-US000BNC4",
-        "ITEM_NUMBER": "V303645",
-        "DESCRIPTION": "SE10000HD w/RGM - SE10000H-US000BNC4",
-        "UOM": "EA",
-        "ITEM_CLASS": "Inverters",
-        "CATEGORY": "Cash_Loan",
-        "CATALOG_NAME": "VS Design Catalog",
-        "DEALER": "Ben Reber",
-        "DEVELOPMENT_NAME": "Lindon Meadows",
+        "name": "V303645 - Direct - Cash - 26",
         "LEAD_SOURCE": "Direct",
         "CONTRACT_RESTRICTIONS": "Cash",
-        "ITEM_STATUS": "Consume",
-        "ORGANIZATION": "MA03",
-        "MANUFACTURER_PART_NUM": "SE10000H-US000BNC4",
-        "MANUFACTURER_NAME": "SolarEdge Technologies",
-        "IS_SERIALIZABLE": "FALSE",
-        "PRODUCT_TYPE": "Inverter",
-        "PRODUCT_CLASS": "",
         "ITC_CODE": "26"
     },
     {
         "id": "V303645",
-        "name": "SolarEdge Technologies SE10000H-US000BNC4",
-        "ITEM_NUMBER": "V303645",
-        "DESCRIPTION": "SE10000HD w/RGM - SE10000H-US000BNC4",
-        "UOM": "EA",
-        "ITEM_CLASS": "Inverters",
-        "CATEGORY": "Cash_Loan",
-        "CATALOG_NAME": "VS Design Catalog",
-        "DEALER": "Ben Reber",
-        "DEVELOPMENT_NAME": "Lindon Meadows",
+        "name": "V303645 - Direct - Loan - 26",
         "LEAD_SOURCE": "Direct",
         "CONTRACT_RESTRICTIONS": "Loan",
-        "ITEM_STATUS": "Consume",
-        "ORGANIZATION": "MA03",
-        "MANUFACTURER_PART_NUM": "SE10000H-US000BNC4",
-        "MANUFACTURER_NAME": "SolarEdge Technologies",
-        "IS_SERIALIZABLE": "FALSE",
-        "PRODUCT_TYPE": "Inverter",
-        "PRODUCT_CLASS": "",
         "ITC_CODE": "26"
     }
 ]
 const moduleItems = [
+    // Cash / Loan Items
     {
-        "id": "V304504",
-        "name": "Hanwha Solar Q.PEAK DUO BLK-G5 320w- ITC26",
-        "ITEM_NUMBER": "V304504",
-        "DESCRIPTION": "HAN 320 MONO BLK - Q.PEAK DUO BLK-G5 320w- ITC26",
-        "UOM": "EA",
-        "ITEM_CLASS": "Modules",
-        "CATEGORY": "Cash_Loan",
-        "CATALOG_NAME": "VS Design Catalog",
-        "DEALER": "Ben Reber",
-        "DEVELOPMENT_NAME": "Lindon Meadows",
+        "id": "V303333",
+        "name": "V303333 - Direct - Cash - 26",
         "LEAD_SOURCE": "Direct",
         "CONTRACT_RESTRICTIONS": "Cash",
-        "ITEM_STATUS": "Active",
-        "ORGANIZATION": "MA03",
-        "MANUFACTURER_PART_NUM": "Q.PEAK DUO BLK-G5 320w- ITC26",
-        "MANUFACTURER_NAME": "Hanwha Solar",
-        "IS_SERIALIZABLE": "FALSE",
-        "PRODUCT_TYPE": "Monocrystalline",
-        "PRODUCT_CLASS": "",
         "ITC_CODE": "26"
     },
     {
-        "id": "V304504",
-        "name": "Hanwha Solar Q.PEAK DUO BLK-G5 320w- ITC26",
-        "ITEM_NUMBER": "V304504",
-        "DESCRIPTION": "HAN 320 MONO BLK - Q.PEAK DUO BLK-G5 320w- ITC26",
-        "UOM": "EA",
-        "ITEM_CLASS": "Modules",
-        "CATEGORY": "Cash_Loan",
-        "CATALOG_NAME": "VS Design Catalog",
-        "DEALER": "Ben Reber",
-        "DEVELOPMENT_NAME": "Lindon Meadows",
+        "id": "V303333",
+        "name": "V303333 - Direct - Loan - 26",
         "LEAD_SOURCE": "Direct",
         "CONTRACT_RESTRICTIONS": "Loan",
-        "ITEM_STATUS": "Active",
-        "ORGANIZATION": "MA03",
-        "MANUFACTURER_PART_NUM": "Q.PEAK DUO BLK-G5 320w- ITC26",
-        "MANUFACTURER_NAME": "Hanwha Solar",
-        "IS_SERIALIZABLE": "FALSE",
-        "PRODUCT_TYPE": "Monocrystalline",
-        "PRODUCT_CLASS": "",
         "ITC_CODE": "26"
     },
     {
-        "id": "V304638",
-        "name": "Hanwha Solar Q.PEAK DUO BLK-G6 340w- ITC26",
-        "ITEM_NUMBER": "V304638",
-        "DESCRIPTION": "HAN 340 MONO BLK - Q.PEAK DUO BLK-G6+ 340w- ITC26",
-        "UOM": "EA",
-        "ITEM_CLASS": "Modules",
-        "CATEGORY": "PPA_Lease",
-        "CATALOG_NAME": "VS Design Catalog",
-        "DEALER": "",
-        "DEVELOPMENT_NAME": "",
+        "id": "V304444",
+        "name": "V304444 - Direct - Cash - 26",
+        "LEAD_SOURCE": "Direct",
+        "CONTRACT_RESTRICTIONS": "Cash",
+        "ITC_CODE": "26"
+    },
+    {
+        "id": "V304444",
+        "name": "V304444 - Direct - Loan - 26",
+        "LEAD_SOURCE": "Direct",
+        "CONTRACT_RESTRICTIONS": "Loan",
+        "ITC_CODE": "26"
+    },
+    {
+        "id": "V304442",
+        "name": "V304442 - Direct - Cash - 30",
+        "LEAD_SOURCE": "Direct",
+        "CONTRACT_RESTRICTIONS": "Cash",
+        "ITC_CODE": "30"
+    },
+
+    // PPA / Lease Items
+    {
+        "id": "V305555",
+        "name": "V305555 - Direct - PPA - 30",
         "LEAD_SOURCE": "Direct",
         "CONTRACT_RESTRICTIONS": "PPA",
-        "ITEM_STATUS": "Active",
-        "ORGANIZATION": "MA03",
-        "MANUFACTURER_PART_NUM": "Q.PEAK DUO BLK-G6 340w- ITC26",
-        "MANUFACTURER_NAME": "Hanwha Solar",
-        "IS_SERIALIZABLE": "FALSE",
-        "PRODUCT_TYPE": "Monocrystalline",
-        "PRODUCT_CLASS": "",
-        "ITC_CODE": "26"
-    },
-    {
-        "id": "V304638",
-        "name": "Hanwha Solar Q.PEAK DUO BLK-G6 340w- ITC26",
-        "ITEM_NUMBER": "V304638",
-        "DESCRIPTION": "HAN 340 MONO BLK - Q.PEAK DUO BLK-G6+ 340w- ITC26",
-        "UOM": "EA",
-        "ITEM_CLASS": "Modules",
-        "CATEGORY": "PPA_Lease",
-        "CATALOG_NAME": "VS Design Catalog",
-        "DEALER": "",
-        "DEVELOPMENT_NAME": "",
-        "LEAD_SOURCE": "Direct",
-        "CONTRACT_RESTRICTIONS": "Lease",
-        "ITEM_STATUS": "Active",
-        "ORGANIZATION": "MA03",
-        "MANUFACTURER_PART_NUM": "Q.PEAK DUO BLK-G6 340w- ITC26",
-        "MANUFACTURER_NAME": "Hanwha Solar",
-        "IS_SERIALIZABLE": "FALSE",
-        "PRODUCT_TYPE": "Monocrystalline",
-        "PRODUCT_CLASS": "",
-        "ITC_CODE": "26"
-    },
-    {
-        "id": "V304362",
-        "name": "Jinko Solar JKM325M-60HBL",
-        "ITEM_NUMBER": "V304362",
-        "DESCRIPTION": "JKS-325M-Half Cell - JKM325M-60HBL- ITC30",
-        "UOM": "EA",
-        "ITEM_CLASS": "Modules",
-        "CATEGORY": "ITC 30",
-        "CATALOG_NAME": "VS Design Catalog",
-        "DEALER": "",
-        "DEVELOPMENT_NAME": "",
-        "LEAD_SOURCE": "Direct",
-        "CONTRACT_RESTRICTIONS": "PPA",
-        "ITEM_STATUS": "Active",
-        "ORGANIZATION": "MA03",
-        "MANUFACTURER_PART_NUM": "JKM325M-60HBL",
-        "MANUFACTURER_NAME": "Jinko Solar",
-        "IS_SERIALIZABLE": "FALSE",
-        "PRODUCT_TYPE": "Monocrystalline",
-        "PRODUCT_CLASS": "",
         "ITC_CODE": "30"
     },
     {
-        "id": "V304362",
-        "name": "Jinko Solar JKM325M-60HBL",
-        "ITEM_NUMBER": "V304362",
-        "DESCRIPTION": "JKS-325M-Half Cell - JKM325M-60HBL- ITC30",
-        "UOM": "EA",
-        "ITEM_CLASS": "Modules",
-        "CATEGORY": "ITC 30",
-        "CATALOG_NAME": "VS Design Catalog",
-        "DEALER": "",
-        "DEVELOPMENT_NAME": "",
+        "id": "V305555",
+        "name": "V305555 - Direct - Lease - 30",
         "LEAD_SOURCE": "Direct",
         "CONTRACT_RESTRICTIONS": "Lease",
-        "ITEM_STATUS": "Active",
-        "ORGANIZATION": "MA03",
-        "MANUFACTURER_PART_NUM": "JKM325M-60HBL",
-        "MANUFACTURER_NAME": "Jinko Solar",
-        "IS_SERIALIZABLE": "FALSE",
-        "PRODUCT_TYPE": "Monocrystalline",
-        "PRODUCT_CLASS": "",
         "ITC_CODE": "30"
+    },
+    {
+        "id": "V305566",
+        "name": "V305566 - Direct - PPA - 30",
+        "LEAD_SOURCE": "Direct",
+        "CONTRACT_RESTRICTIONS": "PPA",
+        "ITC_CODE": "30"
+    },
+    {
+        "id": "V305566",
+        "name": "V305566 - Direct - Lease - 30",
+        "LEAD_SOURCE": "Direct",
+        "CONTRACT_RESTRICTIONS": "Lease",
+        "ITC_CODE": "30"
+    },
+    {
+        "id": "V305577",
+        "name": "V305577 - Direct - PPA - 26",
+        "LEAD_SOURCE": "Direct",
+        "CONTRACT_RESTRICTIONS": "PPA",
+        "ITC_CODE": "26"
     }
 ]
 
@@ -407,342 +168,6 @@ const moduleItems = [
 module.exports = {
     ahj: {
         rules: {
-            BLAH:[
-                {
-                    "condition": [
-                        {
-                            "left": "leadSource",
-                            "operator": "=",
-                            "right": "MPH"
-                        }
-                    ],
-                    "onConflict": "filter",
-                    "value": {
-                        "_type": "contain",
-                        "LEAD_SOURCE": [
-                            "MPH"
-                        ]
-                    }
-                },
-                {
-                    "condition": [
-                        {
-                            "left": "leadSource",
-                            "operator": "=",
-                            "right": "Homebuilder"
-                        }
-                    ],
-                    "onConflict": "filter",
-                    "value": {
-                        "_type": "contain",
-                        "LEAD_SOURCE": [
-                            "Homebuilder"
-                        ]
-                    }
-                },
-                {
-                    "condition": [
-                        {
-                            "left": "leadSource",
-                            "operator": "!=",
-                            "right": "Homebuilder"
-                        },
-                        {
-                            "left": "leadSource",
-                            "operator": "!=",
-                            "right": "MPH"
-                        }
-                    ],
-                    "onConflict": "filter",
-                    "value": {
-                        "_type": "contain",
-                        "LEAD_SOURCE": [
-                            "Direct"
-                        ]
-                    }
-                },
-                {
-                    "condition": [
-                        {
-                            "left": "contractType",
-                            "operator": "=",
-                            "right": "cash"
-                        }
-                    ],
-                    "onConflict": "filter",
-                    "value": {
-                        "_type": "contain",
-                        "CONTRACT_RESTRICTIONS": [
-                            "Cash",
-                            ""
-                        ]
-                    }
-                },
-                {
-                    "condition": [
-                        {
-                            "left": "contractType",
-                            "operator": "=",
-                            "right": "lease"
-                        }
-                    ],
-                    "onConflict": "filter",
-                    "value": {
-                        "_type": "contain",
-                        "CONTRACT_RESTRICTIONS": [
-                            "Lease",
-                            ""
-                        ]
-                    }
-                },
-                {
-                    "condition": [
-                        {
-                            "left": "contractType",
-                            "operator": "=",
-                            "right": "zeroLease"
-                        }
-                    ],
-                    "onConflict": "filter",
-                    "value": {
-                        "_type": "contain",
-                        "CONTRACT_RESTRICTIONS": [
-                            "Lease",
-                            ""
-                        ]
-                    }
-                },
-                {
-                    "condition": [
-                        {
-                            "left": "contractType",
-                            "operator": "=",
-                            "right": "loan"
-                        }
-                    ],
-                    "onConflict": "filter",
-                    "value": {
-                        "_type": "contain",
-                        "CONTRACT_RESTRICTIONS": [
-                            "Loan",
-                            ""
-                        ]
-                    }
-                },
-                {
-                    "condition": [
-                        {
-                            "left": "contractType",
-                            "operator": "=",
-                            "right": "ppa"
-                        }
-                    ],
-                    "onConflict": "filter",
-                    "value": {
-                        "_type": "contain",
-                        "CONTRACT_RESTRICTIONS": [
-                            "PPA",
-                            ""
-                        ]
-                    }
-                },
-                {
-                    "condition": [
-                        {
-                            "left": "contractType",
-                            "operator": "=",
-                            "right": "ppa"
-                        },
-                        {
-                            "left": "isSpecialPurchaseSafeHarbor",
-                            "operator": "=",
-                            "right": false
-                        }
-                    ],
-                    "onConflict": "filter",
-                    "value": {
-                        "_size": 1,
-                        "_type": "sort",
-                        "id": "alphaNumeric",
-                        "ITC_CODE": [
-                            "30",
-                            "26",
-                            "22"
-                        ]
-                    }
-                },
-                {
-                    "condition": [
-                        {
-                            "left": "contractType",
-                            "operator": "=",
-                            "right": "lease"
-                        },
-                        {
-                            "left": "isSpecialPurchaseSafeHarbor",
-                            "operator": "=",
-                            "right": false
-                        }
-                    ],
-                    "onConflict": "filter",
-                    "value": {
-                        "_size": 1,
-                        "_type": "sort",
-                        "id": "alphaNumeric",
-                        "ITC_CODE": [
-                            "30",
-                            "26",
-                            "22"
-                        ]
-                    }
-                },
-                {
-                    "condition": [
-                        {
-                            "left": "contractType",
-                            "operator": "=",
-                            "right": "zeroLease"
-                        },
-                        {
-                            "left": "isSpecialPurchaseSafeHarbor",
-                            "operator": "=",
-                            "right": false
-                        }
-                    ],
-                    "onConflict": "filter",
-                    "value": {
-                        "_size": 1,
-                        "_type": "sort",
-                        "id": "alphaNumeric",
-                        "ITC_CODE": [
-                            "30",
-                            "26",
-                            "22"
-                        ]
-                    }
-                },
-                {
-                    "condition": [
-                        {
-                            "left": "contractType",
-                            "operator": "=",
-                            "right": "ppa"
-                        },
-                        {
-                            "left": "isSpecialPurchaseSafeHarbor",
-                            "operator": "=",
-                            "right": true
-                        }
-                    ],
-                    "onConflict": "filter",
-                    "value": {
-                        "_size": 1,
-                        "_type": "sort",
-                        "id": "alphaNumeric",
-                        "ITC_CODE": [
-                            "22",
-                            "26",
-                            "30"
-                        ]
-                    }
-                },
-                {
-                    "condition": [
-                        {
-                            "left": "contractType",
-                            "operator": "=",
-                            "right": "lease"
-                        },
-                        {
-                            "left": "isSpecialPurchaseSafeHarbor",
-                            "operator": "=",
-                            "right": true
-                        }
-                    ],
-                    "onConflict": "filter",
-                    "value": {
-                        "_size": 1,
-                        "_type": "sort",
-                        "id": "alphaNumeric",
-                        "ITC_CODE": [
-                            "22",
-                            "26",
-                            "30"
-                        ]
-                    }
-                },
-                {
-                    "condition": [
-                        {
-                            "left": "contractType",
-                            "operator": "=",
-                            "right": "zeroLease"
-                        },
-                        {
-                            "left": "isSpecialPurchaseSafeHarbor",
-                            "operator": "=",
-                            "right": true
-                        }
-                    ],
-                    "onConflict": "filter",
-                    "value": {
-                        "_size": 1,
-                        "_type": "sort",
-                        "id": "alphaNumeric",
-                        "ITC_CODE": [
-                            "22",
-                            "26",
-                            "30"
-                        ]
-                    }
-                },
-                {
-                    "condition": [
-                        {
-                            "left": "contractType",
-                            "operator": "=",
-                            "right": "cash"
-                        }
-                    ],
-                    "onConflict": "filter",
-                    "value": {
-                        "_size": 1,
-                        "_type": "sort",
-                        "id": "alphaNumeric",
-                        "ITC_CODE": [
-                            "22",
-                            "26",
-                            "30"
-                        ]
-                    }
-                },
-                {
-                    "condition": [
-                        {
-                            "left": "contractType",
-                            "operator": "=",
-                            "right": "loan"
-                        }
-                    ],
-                    "onConflict": "filter",
-                    "value": {
-                        "_size": 1,
-                        "_type": "sort",
-                        "id": "alphaNumeric",
-                        "ITC_CODE": [
-                            "22",
-                            "26",
-                            "30"
-                        ]
-                    }
-                },
-                {
-                    "onConflict": "filter",
-                    "value": {
-                        "_type": "contain"
-                    }
-                }
-            ],
             allowableModules: {
                 "statements": [
                     // LEAD_SOURCE contain filters
@@ -754,7 +179,7 @@ module.exports = {
                                 "right": "MPH"
                             }
                         ],
-                        "onConflict": "filter",
+
                         "value": {
                             "_type": "contain",
                             "LEAD_SOURCE": [
@@ -770,7 +195,7 @@ module.exports = {
                                 "right": "Homebuilder"
                             }
                         ],
-                        "onConflict": "filter",
+
                         "value": {
                             "_type": "contain",
                             "LEAD_SOURCE": [
@@ -791,7 +216,7 @@ module.exports = {
                                 "right": "MPH"
                             }
                         ],
-                        "onConflict": "filter",
+
                         "value": {
                             "_type": "contain",
                             "LEAD_SOURCE": [
@@ -808,7 +233,7 @@ module.exports = {
                                 "right": "cash"
                             }
                         ],
-                        "onConflict": "filter",
+
                         "value": {
                             "_type": "contain",
                             "CONTRACT_RESTRICTIONS": [
@@ -825,7 +250,7 @@ module.exports = {
                                 "right": "lease"
                             }
                         ],
-                        "onConflict": "filter",
+
                         "value": {
                             "_type": "contain",
                             "CONTRACT_RESTRICTIONS": [
@@ -842,7 +267,7 @@ module.exports = {
                                 "right": "zeroLease"
                             }
                         ],
-                        "onConflict": "filter",
+
                         "value": {
                             "_type": "contain",
                             "CONTRACT_RESTRICTIONS": [
@@ -859,7 +284,7 @@ module.exports = {
                                 "right": "loan"
                             }
                         ],
-                        "onConflict": "filter",
+
                         "value": {
                             "_type": "contain",
                             "CONTRACT_RESTRICTIONS": [
@@ -876,7 +301,7 @@ module.exports = {
                                 "right": "ppa"
                             }
                         ],
-                        "onConflict": "filter",
+
                         "value": {
                             "_type": "contain",
                             "CONTRACT_RESTRICTIONS": [
@@ -899,16 +324,12 @@ module.exports = {
                                 "right": false
                             }
                         ],
-                        "onConflict": "filter",
+
                         "value": {
                             "_size": 1,
                             "_type": "sort",
-                            "id": "alphaNumeric",
-                            "ITC_CODE": [
-                                "30",
-                                "26",
-                                "22"
-                            ]
+                            "id": "alphanumeric",
+                            "ITC_CODE": "reverseAlphanumeric"
                         }
                     },
                     {
@@ -924,16 +345,12 @@ module.exports = {
                                 "right": false
                             }
                         ],
-                        "onConflict": "filter",
+
                         "value": {
                             "_size": 1,
                             "_type": "sort",
-                            "id": "alphaNumeric",
-                            "ITC_CODE": [
-                                "30",
-                                "26",
-                                "22"
-                            ]
+                            "id": "alphanumeric",
+                            "ITC_CODE": "reverseAlphanumeric"
                         }
                     },
                     {
@@ -949,16 +366,12 @@ module.exports = {
                                 "right": false
                             }
                         ],
-                        "onConflict": "filter",
+
                         "value": {
                             "_size": 1,
                             "_type": "sort",
-                            "id": "alphaNumeric",
-                            "ITC_CODE": [
-                                "30",
-                                "26",
-                                "22"
-                            ]
+                            "id": "alphanumeric",
+                            "ITC_CODE": "reverseAlphanumeric"
                         }
                     },
                     {
@@ -974,16 +387,12 @@ module.exports = {
                                 "right": true
                             }
                         ],
-                        "onConflict": "filter",
+
                         "value": {
                             "_size": 1,
                             "_type": "sort",
-                            "id": "alphaNumeric",
-                            "ITC_CODE": [
-                                "22",
-                                "26",
-                                "30"
-                            ]
+                            "id": "alphanumeric",
+                            "ITC_CODE": "alphanumeric"
                         }
                     },
                     {
@@ -999,16 +408,12 @@ module.exports = {
                                 "right": true
                             }
                         ],
-                        "onConflict": "filter",
+
                         "value": {
                             "_size": 1,
                             "_type": "sort",
-                            "id": "alphaNumeric",
-                            "ITC_CODE": [
-                                "22",
-                                "26",
-                                "30"
-                            ]
+                            "id": "alphanumeric",
+                            "ITC_CODE": "alphanumeric"
                         }
                     },
                     {
@@ -1024,21 +429,15 @@ module.exports = {
                                 "right": true
                             }
                         ],
-                        "onConflict": "filter",
+
                         "value": {
                             "_size": 1,
                             "_type": "sort",
-                            "id": "alphaNumeric",
-                            "ITC_CODE": [
-                                "22",
-                                "26",
-                                "30"
-                            ]
+                            "id": "alphanumeric",
+                            "ITC_CODE": "alphanumeric"
                         }
                     },
-
                     // contractType = cash/loan sort
-
                     {
                         "condition": [
                             {
@@ -1047,16 +446,12 @@ module.exports = {
                                 "right": "cash"
                             }
                         ],
-                        "onConflict": "filter",
+
                         "value": {
                             "_size": 1,
                             "_type": "sort",
-                            "id": "alphaNumeric",
-                            "ITC_CODE": [
-                                "22",
-                                "26",
-                                "30"
-                            ]
+                            "id": "alphanumeric",
+                            "ITC_CODE": "alphanumeric"
                         }
                     },
                     {
@@ -1067,22 +462,17 @@ module.exports = {
                                 "right": "loan"
                             }
                         ],
-                        "onConflict": "filter",
+
                         "value": {
                             "_size": 1,
                             "_type": "sort",
-                            "id": "alphaNumeric",
-                            "ITC_CODE": [
-                                "22",
-                                "26",
-                                "30"
-                            ]
+                            "id": "alphanumeric",
+                            "ITC_CODE": "alphanumeric"
                         }
                     },
-
                     // Default Condition
                     {
-                        "onConflict": "filter",
+
                         "value": {
                             "_type": "contain"
                         }
@@ -1092,7 +482,6 @@ module.exports = {
             allowableInverters: {
                 "statements": [
                     // LEAD_SOURCE contain filters
-
                     {
                         "condition": [
                             {
@@ -1101,7 +490,6 @@ module.exports = {
                                 "right": "MPH"
                             }
                         ],
-                        "onConflict": "filter",
                         "value": {
                             "_type": "contain",
                             "LEAD_SOURCE": [
@@ -1117,7 +505,6 @@ module.exports = {
                                 "right": "Homebuilder"
                             }
                         ],
-                        "onConflict": "filter",
                         "value": {
                             "_type": "contain",
                             "LEAD_SOURCE": [
@@ -1138,7 +525,7 @@ module.exports = {
                                 "right": "MPH"
                             }
                         ],
-                        "onConflict": "filter",
+
                         "value": {
                             "_type": "contain",
                             "LEAD_SOURCE": [
@@ -1156,7 +543,6 @@ module.exports = {
                                 "right": "cash"
                             }
                         ],
-                        "onConflict": "filter",
                         "value": {
                             "_type": "contain",
                             "CONTRACT_RESTRICTIONS": [
@@ -1173,7 +559,6 @@ module.exports = {
                                 "right": "lease"
                             }
                         ],
-                        "onConflict": "filter",
                         "value": {
                             "_type": "contain",
                             "CONTRACT_RESTRICTIONS": [
@@ -1190,7 +575,6 @@ module.exports = {
                                 "right": "zeroLease"
                             }
                         ],
-                        "onConflict": "filter",
                         "value": {
                             "_type": "contain",
                             "CONTRACT_RESTRICTIONS": [
@@ -1207,7 +591,6 @@ module.exports = {
                                 "right": "loan"
                             }
                         ],
-                        "onConflict": "filter",
                         "value": {
                             "_type": "contain",
                             "CONTRACT_RESTRICTIONS": [
@@ -1224,7 +607,6 @@ module.exports = {
                                 "right": "ppa"
                             }
                         ],
-                        "onConflict": "filter",
                         "value": {
                             "_type": "contain",
                             "CONTRACT_RESTRICTIONS": [
@@ -1235,7 +617,6 @@ module.exports = {
                     },
                     // Default Condition
                     {
-                        "onConflict": "filter",
                         "value": {
                             "_type": "contain"
                         }
@@ -1359,7 +740,7 @@ module.exports = {
                         },
                     },
                     items: moduleItems,
-                    "onConflict": "standard"
+                    "onConflict": "union"
                 }
             },
             allowableInverters: {
@@ -1457,7 +838,7 @@ module.exports = {
                         }
                     },
                     items: inverterItems,
-                    "onConflict": "standard"
+                    "onConflict": "union"
                 }
             }
         },
