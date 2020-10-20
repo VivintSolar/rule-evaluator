@@ -40,6 +40,11 @@ const LegacyAhjRefs = require("./FamilyTree/LegacyAhjRefs");
 
 const allTestMeasurementsConverter = require("./MeasurementsConverter/allTest");
 
+const InitializationAssociationObjectV1 = require("./Association/Initialization/AssociationObjectV1");
+const InitializationAssociationObjectV2 = require("./Association/Initialization/AssociationObjectV2");
+const EvaluateAllAssociationObjectV1 = require("./Association/EvaluateAll/AssociationObjectV1");
+const EvaluateAllAssociationObjectV2 = require("./Association/EvaluateAll/AssociationObjectV2");
+
 
 getAppliedStatementRE();
 getPossibleStatementsRE();
@@ -83,3 +88,8 @@ DesignedAHJ();
 LegacyAhjRefs();
 
 allTestMeasurementsConverter();
+
+InitializationAssociationObjectV1();
+InitializationAssociationObjectV2();
+EvaluateAllAssociationObjectV1();
+EvaluateAllAssociationObjectV2();

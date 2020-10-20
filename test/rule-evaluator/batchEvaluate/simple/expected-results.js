@@ -8,7 +8,10 @@ module.exports = JSON.stringify({
         conditions: null,
         source: undefined,
         description: undefined,
-        value: 'Nominal',
+        value: {
+            name: "Nominal",
+            id: "nominal"
+        },
         errors: null,
         id: 'acSystemSizeCalcParameter'
     },
