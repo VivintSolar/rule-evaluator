@@ -17,5 +17,6 @@ module.exports = {
     documents: [
         ...ahjDocuments,
         ...definitions
-    ]
+    ],
+    apiVersion: 'v2'
 }

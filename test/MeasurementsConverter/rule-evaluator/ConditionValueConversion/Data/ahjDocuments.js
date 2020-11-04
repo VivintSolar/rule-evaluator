@@ -34,7 +34,7 @@ const kennyCity = {
         templateStringRule:{
             statements:[
                 {
-                    value: "NumberCondition > 10 - numberCondition: {numberCondition}, numberRule: {numberRule}",
+                    value: "NumberCondition > 10 - numberCondition: {numberCondition}, numberRule: {numberRule}, numberCondition2: {numberCondition2}",
                     condition:[
                         {
                             left: "numberCondition",
@@ -44,7 +44,7 @@ const kennyCity = {
                     ]
                 },
                 {
-                    value: "NumberCondition < 10 - numberCondition: {numberCondition}, numberRule: {numberRule}",
+                    value: "NumberCondition < 10 - numberCondition: {numberCondition}, numberRule: {numberRule}, numberCondition2: {numberCondition2}",
                     condition:[
                         {
                             left: "numberCondition",
@@ -54,7 +54,7 @@ const kennyCity = {
                     ]
                 },
                 {
-                    value: "DEFAULT - numberCondition: {numberCondition}, numberRule: {numberRule}"
+                    value: "DEFAULT - numberCondition: {numberCondition}, numberRule: {numberRule}, numberCondition2: {numberCondition2}"
                 }
             ]
         }

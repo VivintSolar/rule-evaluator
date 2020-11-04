@@ -6,7 +6,7 @@ const numberRule = {
     ruleAsParameter: [
         "templateStringRule"
     ],
-    condition: true,
+    rule: true,
     template: {
         onConflict: "standard",
         dataType: "number",
@@ -30,6 +30,21 @@ const numberCondition = {
         displayUnitsAs: "ft"
     },
 }
+const numberCondition2 = {
+    id: "numberCondition2",
+    name: "Number Condition 2",
+    description: "Number Condition 2 Description",
+    applyTo: [
+        "templateStringRule"
+    ],
+    condition: true,
+    template: {
+        onConflict: "standard",
+        dataType: "number",
+        units: "m",
+        displayUnitsAs: "ft"
+    },
+}
 
 
 const templateStringRule = {
@@ -41,7 +56,8 @@ const templateStringRule = {
         dataType: "template string"
     },
     allowableConditions: [
-        "numberCondition"
+        "numberCondition",
+        "numberCondition2"
     ],
     allowableRuleParameters:[
         "numberRule"
@@ -50,5 +66,8 @@ const templateStringRule = {
 };
 
 module.exports = [
-    templateStringRule
+    templateStringRule,
+    numberRule,
+    numberCondition,
+    numberCondition2
 ];
