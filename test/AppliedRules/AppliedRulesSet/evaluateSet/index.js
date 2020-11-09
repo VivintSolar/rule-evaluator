@@ -67,8 +67,6 @@ module.exports = () => {
     ruleEvaluator1.defineSetByView( viewId );
     const result1 = ruleEvaluator1.evaluateSet( conditions1 );
 
-    console.log('result1::',result1);
-
     const results = [ result, result1 ];
 
     assert.strictEqual( expected, JSON.stringify(results) );

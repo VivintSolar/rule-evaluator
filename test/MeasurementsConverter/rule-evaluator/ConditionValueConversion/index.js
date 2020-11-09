@@ -3,17 +3,13 @@
 
 
 const RuleEvaluator = require('../../../../index');
+const measurements = require('../../../../lib/Measurements');
 const assert = require('assert');
 const associationObjectV2 = require('./Data/associationObjectV2');
-// const outputJsonFile = require('../../../utilities/outputJsonFile');
 const path = require('path');
-
-// const outputPath = path.resolve('./output');
 
 const expected = require('./Data/expected')
 
-
-// outputJsonFile( outputPath, 'TemplateStringRuleEvaluation1', evaluated, true )
 
 module.exports = () => {
     const ruleEvaluator = new RuleEvaluator( associationObjectV2 );
@@ -22,11 +18,12 @@ module.exports = () => {
         // also it might be helpful to look into how google does its translation in the search
        numberCondition: {
            // value: 393.701, // is ~10meters (=10.0000054) will this cause any problems if were trying for 10?
-           value: 393.701, // is ~10meters (=10.0000054) will this cause any problems if were trying for 10?
-           units: "in"
+           value: measurements.reconstruct(10, 'm', 'in'), // is ~10meters (=10.0000054) will this cause any problems if were trying for 10?
+           units: "in",
+           roundTo: 4
        },
         numberCondition2: {
-            value: 32.8084, // is ~10meters (=10.00000032) will this cause any problems if were trying for 10?
+            value: measurements.reconstruct(10, 'm', 'ft'), // is ~10meters (=10.00000032) will this cause any problems if were trying for 10?
             units: "ft",
             roundTo: 2
         }

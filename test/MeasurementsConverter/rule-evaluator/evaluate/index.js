@@ -38,9 +38,8 @@ module.exports = () => {
             basicBooleanRule: defaultEvaluated.basicBooleanRule.value,
             customDisplayBooleanRule: defaultEvaluated.customDisplayBooleanRule.value
         }
-
     }
 
-    assert.equal( JSON.stringify(results), evaluateAllTypesExpected );
+    assert.strictEqual( JSON.stringify(results), evaluateAllTypesExpected );
     console.log(`RuleEvaluator -- Measurements --- evaluate ---> Success!!!!!!!!!`);
 };
