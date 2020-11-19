@@ -17,8 +17,8 @@ module.exports = () => {
         ]
     };
 
-    const evaluated = evaluator.batchEvaluate( params.rules, params.conditions );
+    const evaluated = evaluator.batchEvaluate( params.rules );
 
-    assert.equal( expected, JSON.stringify(evaluated) );
+    assert.strictEqual( expected, JSON.stringify(evaluated) );
     console.log('RE --- Batch Evaluate Simple ---> Success!!!!!!!!!');
 };
