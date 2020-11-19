@@ -34,7 +34,7 @@ module.exports = JSON.stringify(
                 "name": "St. Petersburg",
                 "type": "City"
             },
-            "value": 236.2206,
+            "value": 236.221,
             "errors": null,
             "id": "numberRule"
         },
@@ -82,7 +82,7 @@ module.exports = JSON.stringify(
                 "name": "St. Petersburg",
                 "type": "City"
             },
-            "value": 236.2206,
+            "value": 236.221,
             "errors": null,
             "id": "numberRuleUnion"
         },
