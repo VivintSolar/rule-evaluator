@@ -16,7 +16,7 @@ module.exports = () => {
         contractType: "ppa",
         numberCondition: 80,
         numberCondition1: 365.7599882956804,
-        booleanCondition: true
+        booleanCondition: "Yes"
     };
 
     const ruleEvaluator = new RuleEvaluator( associationObject );
@@ -28,6 +28,6 @@ module.exports = () => {
         }))
     );
 
-    assert.equal( expected, JSON.stringify(convertedConditionValues) );
+    assert.strictEqual( expected, JSON.stringify(convertedConditionValues) );
     console.log('Definitions --- convertToDisplayValue ---> Success!!!!!!!!!');
 };

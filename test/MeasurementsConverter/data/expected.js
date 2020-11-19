@@ -4,7 +4,7 @@ const convertToDisplayValue = {
         JSON.stringify({
             serviceLine: 36,
             side: 8,
-            chimney: 236.2206,
+            chimney: 236.221,
             newSolarArray: 4,
             eave: 8,
             obstructions: 3,
@@ -15,7 +15,7 @@ const convertToDisplayValue = {
             sidesAgainstWalls: 8,
             valley: 8,
             ridge: 18,
-            inflection: 314.9608
+            inflection: 314.961
         })
     ],
     evaluateAllTypes: JSON.stringify({
@@ -27,7 +27,7 @@ const convertToDisplayValue = {
             ],
             "objectOfSupportedTypesRule": {
                 "numberAttributeUnits": 6,
-                "numberAttributeDisplayAsUnits": 236.2206,
+                "numberAttributeDisplayAsUnits": 236.221,
                 "booleanBasic": true,
                 "booleanDisplayAs": "Yes",
                 "enumBasic": "Option #2",
@@ -44,7 +44,7 @@ const convertToDisplayValue = {
             ],
             "objectOfSupportedTypesRule": {
                 "numberAttributeUnits": 6,
-                "numberAttributeDisplayAsUnits": 236.2206,
+                "numberAttributeDisplayAsUnits": 236.221,
                 "booleanBasic": true,
                 "booleanDisplayAs": true,
                 "enumBasic": "Option #2",
@@ -58,7 +58,7 @@ const convertToDisplayValue = {
 
 const deconstruct = {
     measurements: [
-        JSON.stringify([ { value: 236.2206, units: 'in' } ])
+        JSON.stringify([ { value: 236.221, units: 'in' } ])
     ]
 }
 
