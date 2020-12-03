@@ -3,7 +3,7 @@ const assert = require('assert');
 const associationObject = require('../associationObject');
 
 const expected = JSON.stringify({
-    contractType: { id: 'ppa', name: 'PPA' },
+    contractType: 'PPA',
     numberCondition: 80,
     numberCondition1: 1200,
     booleanCondition: 'Yes'

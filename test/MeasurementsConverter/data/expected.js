@@ -47,10 +47,7 @@ const convertToDisplayValue = {
                 "numberAttributeDisplayAsUnits": 236.221,
                 "booleanBasic": true,
                 "booleanDisplayAs": true,
-                "enumBasic": {
-                    "id": "option2",
-                    "name": "Option #2"
-                },
+                "enumBasic": "Option #2",
                 "dateBasic": "2020-07-29T19:58:47.456Z"
             },
             "basicBooleanRule": true,
