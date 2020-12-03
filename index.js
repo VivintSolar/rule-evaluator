@@ -1,5 +1,5 @@
 
-//VERSION: 2.1.4-beta1
+//VERSION: 2.1.4-beta2
 
 const RuleEvaluator = require('./lib/RuleEvaluator');
 
