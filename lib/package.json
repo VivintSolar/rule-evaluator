@@ -1,6 +1,6 @@
 {
   "name": "@vivintsolar/rule-evaluator",
-  "version": "2.1.8-beta1",
+  "version": "2.1.8-beta2",
   "description": "Node Package to evaluate rules from the Requirements Manager",
   "main": "index.js",
   "scripts": {
