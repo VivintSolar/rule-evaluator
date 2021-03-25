@@ -1,6 +1,6 @@
 {
   "name": "@vivintsolar/rule-evaluator",
-  "version": "2.1.8-beta8",
+  "version": "2.1.8-beta9",
   "description": "Node Package to evaluate rules from the Requirements Manager",
   "main": "index.js",
   "scripts": {
@@ -15,8 +15,5 @@
   "bugs": {
     "url": "https://github.com/kennethchatfield/rule-evaluator/issues"
   },
-  "homepage": "https://github.com/kennethchatfield/rule-evaluator#readme",
-  "dependencies": {
-    "perf_hooks": "0.0.1"
-  }
+  "homepage": "https://github.com/kennethchatfield/rule-evaluator#readme"
 }
